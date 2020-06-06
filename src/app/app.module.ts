@@ -1,32 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
-import { MatButtonModule } from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainLandingModule } from './main-landing/main-landing.module';
 import { CoinManagerModule } from './coin-manager/coin-manager.module';
-import { LoginComponent } from './coin-manager/login/login.component';
+import { SharedModule } from './shared/shared.module';
 
-const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-];
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
-    RouterModule.forRoot(routes),
     BrowserModule,
     BrowserAnimationsModule,
     MainLandingModule,
     CoinManagerModule,
-    MatButtonModule
+    SharedModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  exports: [RouterModule]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

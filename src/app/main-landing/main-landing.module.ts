@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { HomePageComponent } from './home-page/home-page.component';
 import { NavComponent } from './nav/nav.component';
-import { MatButtonModule } from '@angular/material/button';
+import { MaterialModule } from '../shared/material/material.module';
 
 @NgModule({
   declarations: [
@@ -12,10 +12,9 @@ import { MatButtonModule } from '@angular/material/button';
   exports: [
     HomePageComponent,
     NavComponent
-  ]
-  ,
+  ],
   imports: [
-    MatButtonModule
+    MaterialModule
   ]
 })
 export class MainLandingModule { }
