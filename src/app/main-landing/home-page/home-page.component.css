@@ -1,4 +1,12 @@
 
 .index-background {
     background-image: linear-gradient(120deg, #f6d365, #ff9577);
+    min-height: 100vh;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
 }
