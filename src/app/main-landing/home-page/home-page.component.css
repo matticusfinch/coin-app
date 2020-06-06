@@ -6,7 +6,10 @@
 .header {
     display: flex;
     justify-content: center;
+    align-items: center;
     color: white;
     font-family: 'Poppins', sans-serif;
-    font-size: 3rem;
+    font-size: 6rem;
+    line-height: 6rem;
+    height: 20rem;
 }
