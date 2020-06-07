@@ -1,6 +1,7 @@
 
 .index-background {
     background-image: linear-gradient(120deg, #f6d365, #ff9577);
+    height: 30rem;
 }
 .header {
     display: flex;
@@ -10,7 +11,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 6rem;
     line-height: 6rem;
-    height: 30rem;
+    padding-top: 6rem;
 }
 
 .subtext {
