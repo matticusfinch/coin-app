@@ -1,11 +1,37 @@
 import { NgModule } from '@angular/core';
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
-const mm = [ MatButtonModule, MatGridListModule, MatMenuModule, MatToolbarModule ];
+const mm = [ 
+  MatButtonModule,
+  MatGridListModule,
+  MatMenuModule,
+  MatToolbarModule,
+  MatBadgeModule,
+  MatIconModule,
+  MatProgressSpinnerModule,
+  MatSnackBarModule,
+  MatCheckboxModule,
+  MatInputModule,
+  MatRadioModule,
+  MatSelectModule,
+  MatSlideToggleModule,
+  MatDialogModule
+];
 
 @NgModule({
   declarations: [],
