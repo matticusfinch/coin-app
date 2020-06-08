@@ -8,6 +8,12 @@ import { CoinManagerModule } from './coin-manager/coin-manager.module';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
+import { FormsModule } from '@angular/forms';
+import { AuthService } from './services/auth.service';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -18,9 +24,12 @@ import { AppRoutingModule } from './app-routing.module';
     MainLandingModule,
     CoinManagerModule,
     SharedModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
