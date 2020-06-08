@@ -1,9 +1,16 @@
 <app-nav></app-nav>
 
-<div class="index-background ">
-    <h1 class="header">NFLD Coin Manager</h1>
-    <h2 class="subtext">Sick of spreadsheets and tracking coins by hand?</h2>
-</div>
+<mat-toolbar-row class="main-area">
+    <div>
+        <h1 class="header"><strong>NFLD</strong>&nbsp;Coin Manager.</h1>
+        <h2 class="subtext">Ditch the spreadsheets and go digital.</h2>        
+        <button mat-raised-button color="primary" routerLink="/login">GET STARTED</button>
+    </div>
+    <span class="spacer"></span>
+    <div class="rightArea">
+        <img src="assets/img/main-coin.png" alt="1936 One Cent Example" />
+    </div>
+</mat-toolbar-row>
 
 <mat-grid-list cols="2" rowHeight="2:1">
     <mat-grid-tile>
