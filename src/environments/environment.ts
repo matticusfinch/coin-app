@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   firebase : {
     apiKey: 'AIzaSyAuVWLI348STjrtPhRJQ3MOdCeT0dzJI9A',
-    authDomain: 'coins-46e09.firebaseapp.com',
+    authDomain: 'coinmanager.club',
     databaseURL: 'https://coins-46e09.firebaseio.com',
     projectId: 'coins-46e09',
     storageBucket: 'coins-46e09.appspot.com',
