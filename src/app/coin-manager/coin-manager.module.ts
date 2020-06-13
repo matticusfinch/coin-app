@@ -7,13 +7,18 @@ import { MenuComponent } from './menu/menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { ReportingComponent } from './reporting/reporting.component';
+import { AccountComponent } from './account/account.component';
+import { RouterModule } from '@angular/router';
+import { DeleteComponent } from './account/delete/delete.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
     DashboardComponent,
     MenuComponent,
-    ReportingComponent
+    ReportingComponent,
+    AccountComponent,
+    DeleteComponent
   ],
   exports: [
     LoginComponent,
@@ -24,7 +29,8 @@ import { ReportingComponent } from './reporting/reporting.component';
     FormsModule,
     ReactiveFormsModule,
     LayoutModule,
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class CoinManagerModule { }

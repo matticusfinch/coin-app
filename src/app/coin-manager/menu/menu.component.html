@@ -6,7 +6,6 @@
     <mat-toolbar>
       <span>Denomination</span>
       <button
-        aria-label="Close sidenav"
         mat-icon-button
         (click)="drawer.close()"
         *ngIf="isHandset$ | async">
@@ -26,7 +25,6 @@
   <mat-sidenav-content>
     <mat-toolbar color="primary">
       <button
-        aria-label="Open sidenav"
         mat-icon-button
         (click)="drawer.open()"
         *ngIf="isHandset$ | async">
@@ -37,15 +35,15 @@
       <button
         [matMenuTriggerFor]="account"
         mat-icon-button>
-        <mat-icon>account_circle</mat-icon>
+        <mat-icon aria-label="Account access icon">account_circle</mat-icon>
       </button>
       <mat-menu #account class="matMenu">
-        <button mat-menu-item>
-          <mat-icon>face</mat-icon>
+        <button mat-menu-item routerLink="/account">
+          <mat-icon aria-label="My account icon">face</mat-icon>
           <span>Account</span>
         </button>
         <button mat-menu-item>
-          <mat-icon>exit_to_app</mat-icon>
+          <mat-icon aria-label="Logout icon">exit_to_app</mat-icon>
           <span>Logout</span>
         </button>
       </mat-menu>

@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
         },
       },
       signInSuccessUrl: 'dashboard',
-      signInFlow: 'popup',
+      // signInFlow: 'popup', // this make the auth popup, without it, it displays in page, which is better for mobile.
       signInOptions: [
         // Leave the lines as is for the providers you want to offer your users.
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
