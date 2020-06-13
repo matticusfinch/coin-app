@@ -3,7 +3,16 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Denomination</mat-toolbar>
+    <mat-toolbar>
+      <span>Denomination</span>
+      <button
+        aria-label="Close sidenav"
+        mat-icon-button
+        (click)="drawer.close()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav close icon">keyboard_arrow_left</mat-icon>
+      </button>
+    </mat-toolbar>
     <mat-nav-list>
       <a mat-list-item href="/1-cent">1 Cent</a>
       <a mat-list-item href="/5-cent">5 Cent</a>
@@ -17,12 +26,11 @@
   <mat-sidenav-content>
     <mat-toolbar color="primary">
       <button
-        type="button"
-        aria-label="Toggle sidenav"
+        aria-label="Open sidenav"
         mat-icon-button
-        (click)="drawer.toggle()"
+        (click)="drawer.open()"
         *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        <mat-icon aria-label="Side nav open icon">menu</mat-icon>
       </button>
       <span>NFLD Coin Manager</span>      
       <span class="spacer"></span>
