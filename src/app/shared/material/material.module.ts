@@ -17,7 +17,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
-
+import { MatDividerModule } from '@angular/material/divider';
 
 const mm = [ 
   MatButtonModule,
@@ -36,7 +36,8 @@ const mm = [
   MatDialogModule,
   MatSidenavModule,
   MatListModule,
-  MatCardModule
+  MatCardModule,
+  MatDividerModule
 ];
 
 @NgModule({
