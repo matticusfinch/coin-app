@@ -14,7 +14,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 const mm = [ 
   MatButtonModule,
@@ -30,7 +31,9 @@ const mm = [
   MatRadioModule,
   MatSelectModule,
   MatSlideToggleModule,
-  MatDialogModule
+  MatDialogModule,
+  MatSidenavModule,
+  MatListModule
 ];
 
 @NgModule({
