@@ -16,6 +16,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+
 
 const mm = [ 
   MatButtonModule,
@@ -33,7 +35,8 @@ const mm = [
   MatSlideToggleModule,
   MatDialogModule,
   MatSidenavModule,
-  MatListModule
+  MatListModule,
+  MatCardModule
 ];
 
 @NgModule({

@@ -6,12 +6,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MenuComponent } from './menu/menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
+import { ReportingComponent } from './reporting/reporting.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
     DashboardComponent,
-    MenuComponent
+    MenuComponent,
+    ReportingComponent
   ],
   exports: [
     LoginComponent,
