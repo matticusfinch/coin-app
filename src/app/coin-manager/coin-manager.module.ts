@@ -10,6 +10,14 @@ import { ReportingComponent } from './reporting/reporting.component';
 import { AccountComponent } from './account/account.component';
 import { RouterModule } from '@angular/router';
 import { DeleteComponent } from './account/delete/delete.component';
+import { OneCentComponent } from './coins/one-cent/one-cent.component';
+import { FiveCentComponent } from './coins/five-cent/five-cent.component';
+import { TenCentComponent } from './coins/ten-cent/ten-cent.component';
+import { TwentyCentComponent } from './coins/twenty-cent/twenty-cent.component';
+import { TwentyFiveCentComponent } from './coins/twenty-five-cent/twenty-five-cent.component';
+import { FiftyCentComponent } from './coins/fifty-cent/fifty-cent.component';
+import { TwoDollarComponent } from './coins/two-dollar/two-dollar.component';
+import { CardTemplateComponent } from './coins/card-template/card-template.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +26,15 @@ import { DeleteComponent } from './account/delete/delete.component';
     MenuComponent,
     ReportingComponent,
     AccountComponent,
-    DeleteComponent
+    DeleteComponent,
+    OneCentComponent,
+    FiveCentComponent,
+    TenCentComponent,
+    TwentyCentComponent,
+    TwentyFiveCentComponent,
+    FiftyCentComponent,
+    TwoDollarComponent,
+    CardTemplateComponent
   ],
   exports: [
     LoginComponent,
