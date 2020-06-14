@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-coin-list',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./coin-list.component.css']
 })
 export class CoinListComponent implements OnInit {
+  cards:any;
+  denomination:string;
 
-  cards = [
+  oneCent = [
     {
       year: '1864',
       description: 'Some quick example text to build on the card year and make up the bulk of the card content',
@@ -166,9 +169,77 @@ export class CoinListComponent implements OnInit {
       denom: 'One Cent'
     }
   ];
-  constructor() { }
+
+  fiveCent = [
+    {
+      year: '1865',
+      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
+      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
+      denom: 'Five Cent'
+    },
+  ];
+
+  tenCent = [
+    {
+      year: '1865',
+      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
+      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
+      denom: 'Ten Cent'
+    },
+  ];
+
+  twentyCent = [
+    {
+      year: '1865',
+      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
+      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
+      denom: 'Twenty Cent'
+    },
+  ];
+
+  twentyFiveCent = [
+    {
+      year: '1912',
+      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
+      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
+      denom: 'Twenty Five Cent'
+    },
+  ];
+
+  fiftyCent = [
+    {
+      year: '1870',
+      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
+      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
+      denom: 'Fifty Cent'
+    },
+  ];
+
+  twoDollar = [
+    {
+      year: '1865',
+      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
+      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
+      denom: 'Two Dollar'
+    },
+  ];
+  constructor(private activatedRoute:ActivatedRoute) {
+    this.denomination = this.activatedRoute.snapshot.params.denom;
+   }   
 
   ngOnInit(): void {
+    // this.cards = this.denomination;
+    this.getList(this.denomination);
   }
 
+  getList(denom:string): void {
+    switch(denom) {
+      case 'one-cent':
+        this.cards = this.oneCent;
+        break;
+      case 'five-cent':
+        this.cards = this.fiveCent;
+        break;
+    }
+  }
 }
