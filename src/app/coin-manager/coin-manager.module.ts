@@ -17,7 +17,6 @@ import { TwentyCentComponent } from './coins/twenty-cent/twenty-cent.component';
 import { TwentyFiveCentComponent } from './coins/twenty-five-cent/twenty-five-cent.component';
 import { FiftyCentComponent } from './coins/fifty-cent/fifty-cent.component';
 import { TwoDollarComponent } from './coins/two-dollar/two-dollar.component';
-import { CardTemplateComponent } from './coins/card-template/card-template.component';
 
 @NgModule({
   declarations: [
@@ -33,8 +32,7 @@ import { CardTemplateComponent } from './coins/card-template/card-template.compo
     TwentyCentComponent,
     TwentyFiveCentComponent,
     FiftyCentComponent,
-    TwoDollarComponent,
-    CardTemplateComponent
+    TwoDollarComponent
   ],
   exports: [
     LoginComponent,
