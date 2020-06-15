@@ -1,14 +1,12 @@
 [
-    {
-      year: '1917',
-      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      denom: 'Twenty Five Cent'
-    },
-    {
-      year: '1919',
-      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      denom: 'Twenty Five Cent'
-    }
-  ]
+  {
+    "year": 1917,
+    "description": "Some quick example text to build on the card year and make up the bulk of the card content",
+    "img": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+  },
+  {
+    "year": 1919,
+    "description": "Some quick example text to build on the card year and make up the bulk of the card content",
+    "img": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+  }
+]

@@ -1,104 +1,87 @@
 [
-    {
-      year: '1865',
-      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      denom: 'Twenty Cent'
-    },
-    {
-      year: '1870',
-      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      denom: 'Twenty Cent'
-    },
-    {
-      year: '1872',
-      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      denom: 'Twenty Cent'
-    },
-    {
-      year: '1873',
-      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      denom: 'Twenty Cent'
-    },
-    {
-      year: '1876',
-      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      denom: 'Twenty Cent'
-    },
-    {
-      year: '1880',
-      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      denom: 'Twenty Cent'
-    },
-    {
-      year: '1881',
-      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      denom: 'Twenty Cent'
-    },
-    {
-      year: '1882',
-      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      denom: 'Twenty Cent'
-    },
-    {
-      year: '1885',
-      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      denom: 'Twenty Cent'
-    },
-    {
-      year: '1888',
-      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      denom: 'Twenty Cent'
-    },
-    {
-      year: '1890',
-      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      denom: 'Twenty Cent'
-    },
-    {
-      year: '1894',
-      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      denom: 'Twenty Cent'
-    },
-    {
-      year: '1896',
-      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      denom: 'Twenty Cent'
-    },
-    {
-      year: '1899',
-      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      denom: 'Twenty Cent'
-    },
-    {
-      year: '1900',
-      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      denom: 'Twenty Cent'
-    },
-    {
-      year: '1904',
-      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      denom: 'Twenty Cent'
-    },
-    {
-      year: '1912',
-      description: 'Some quick example text to build on the card year and make up the bulk of the card content',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      denom: 'Twenty Cent'
-    }
-  ]
+  {
+    "year": 1865,
+    "description": "Some quick example text to build on the card year and make up the bulk of the card content",
+    "img": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+  },
+  {
+    "year": 1870,
+    "description": "Some quick example text to build on the card year and make up the bulk of the card content",
+    "img": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+  },
+  {
+    "year": 1872,
+    "description": "Some quick example text to build on the card year and make up the bulk of the card content",
+    "img": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+  },
+  {
+    "year": 1873,
+    "description": "Some quick example text to build on the card year and make up the bulk of the card content",
+    "img": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+  },
+  {
+    "year": 1876,
+    "description": "Some quick example text to build on the card year and make up the bulk of the card content",
+    "img": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+  },
+  {
+    "year": 1880,
+    "description": "Some quick example text to build on the card year and make up the bulk of the card content",
+    "img": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+  },
+  {
+    "year": 1881,
+    "description": "Some quick example text to build on the card year and make up the bulk of the card content",
+    "img": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+  },
+  {
+    "year": 1882,
+    "description": "Some quick example text to build on the card year and make up the bulk of the card content",
+    "img": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+  },
+  {
+    "year": 1885,
+    "description": "Some quick example text to build on the card year and make up the bulk of the card content",
+    "img": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+  },
+  {
+    "year": 1888,
+    "description": "Some quick example text to build on the card year and make up the bulk of the card content",
+    "img": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+  },
+  {
+    "year": 1890,
+    "description": "Some quick example text to build on the card year and make up the bulk of the card content",
+    "img": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+  },
+  {
+    "year": 1894,
+    "description": "Some quick example text to build on the card year and make up the bulk of the card content",
+    "img": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+  },
+  {
+    "year": 1896,
+    "description": "Some quick example text to build on the card year and make up the bulk of the card content",
+    "img": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+  },
+  {
+    "year": 1899,
+    "description": "Some quick example text to build on the card year and make up the bulk of the card content",
+    "img": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+  },
+  {
+    "year": 1900,
+    "description": "Some quick example text to build on the card year and make up the bulk of the card content",
+    "img": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+  },
+  {
+    "year": 1904,
+    "description": "Some quick example text to build on the card year and make up the bulk of the card content",
+    "img": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+  },
+  {
+    "year": 1912,
+    "description": "Some quick example text to build on the card year and make up the bulk of the card content",
+    "img": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+  }
+]
