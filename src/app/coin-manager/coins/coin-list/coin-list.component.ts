@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CoinService } from 'src/app/services/coin.service';
+import { CoinCard } from 'src/app/shared/models/coin-card.model';
 
 @Component({
   selector: 'app-coin-list',
@@ -7,12 +9,23 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./coin-list.component.css']
 })
 export class CoinListComponent implements OnInit {
-  cards:any;
-  denomination:string;
+  cards: CoinCard[];
+  denomination: string;
 
-  constructor(private activatedRoute:ActivatedRoute) {
+  constructor(private activatedRoute: ActivatedRoute, private coinService: CoinService) {
     this.denomination = this.activatedRoute.snapshot.params.denom;
-   }   
+   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.getCoins();
+   }
+
+  getCoins() {
+    this.coinService.getCoinList(this.denomination)
+    .subscribe(
+      data => {
+        this.cards = data as CoinCard[];
+      }
+    );
+  }
 }

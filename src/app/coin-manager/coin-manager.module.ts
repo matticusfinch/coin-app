@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { DeleteComponent } from './account/delete/delete.component';
 import { CoinCardTemplateComponent } from './coins/coin-card-template/coin-card-template.component';
 import { CoinListComponent } from './coins/coin-list/coin-list.component';
+import { CoinService } from '../services/coin.service';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,9 @@ import { CoinListComponent } from './coins/coin-list/coin-list.component';
     LayoutModule,
     CommonModule,
     RouterModule
+  ],
+  providers: [
+    CoinService
   ]
 })
 export class CoinManagerModule { }

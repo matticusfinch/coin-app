@@ -13,6 +13,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './services/auth.service';
+import { CoinService } from './services/coin.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,9 +29,10 @@ import { AuthService } from './services/auth.service';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, CoinService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
