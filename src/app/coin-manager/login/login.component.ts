@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
           return true;
         },
       },
-      signInSuccessUrl: 'dashboard',
+      signInSuccessUrl: 'dashboard/reporting',
       // signInFlow: 'popup', // this make the auth popup, without it, it displays in page, which is better for mobile.
       signInOptions: [
         // Leave the lines as is for the providers you want to offer your users.

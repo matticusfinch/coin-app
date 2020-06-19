@@ -12,13 +12,14 @@ export class CoinListComponent implements OnInit {
   cards: CoinCard[];
   denomination: string;
 
-  constructor(private activatedRoute: ActivatedRoute, private coinService: CoinService) {
-    this.denomination = this.activatedRoute.snapshot.params.denom;
-   }
+  constructor(private activatedRoute: ActivatedRoute, private coinService: CoinService) {}
 
   ngOnInit(): void {
-    this.getCoins();
-   }
+      this.activatedRoute.params.subscribe(params => {
+        this.denomination = params.denom;
+        this.getCoins();
+    });
+  }
 
   getCoins() {
     this.coinService.getCoinList(this.denomination)

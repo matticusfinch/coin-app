@@ -13,13 +13,13 @@
       </button>
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="coins/one-cent">1 Cent</a>
-      <a mat-list-item href="coins/five-cent">5 Cent</a>
-      <a mat-list-item href="coins/ten-cent">10 Cent</a>
-      <a mat-list-item href="coins/twenty-cent">20 Cent</a>
-      <a mat-list-item href="coins/twenty-five-cent">25 Cent</a>
-      <a mat-list-item href="coins/fifty-cent">50 Cent</a>
-      <a mat-list-item href="coins/two-dollar">2 Dollar</a>
+      <a mat-list-item [routerLink]="['coins/one-cent']">1 Cent</a>
+      <a mat-list-item [routerLink]="['coins/five-cent']">5 Cent</a>
+      <a mat-list-item [routerLink]="['coins/ten-cent']">10 Cent</a>
+      <a mat-list-item [routerLink]="['coins/twenty-cent']">20 Cent</a>
+      <a mat-list-item [routerLink]="['coins/twenty-five-cent']">25 Cent</a>
+      <a mat-list-item [routerLink]="['coins/fifty-cent']">50 Cent</a>
+      <a mat-list-item [routerLink]="['coins/two-dollar']">2 Dollar</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -30,8 +30,8 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav open icon">menu</mat-icon>
       </button>
-      <span>NFLD Coin Manager</span>      
-      <span class="spacer"></span>      
+      <span>NFLD Coin Manager</span>
+      <span class="spacer"></span>
       <button
         mat-icon-button>
         <mat-icon aria-label="What's New Icon">whatshot</mat-icon>
@@ -52,6 +52,6 @@
         </button>
       </mat-menu>
     </mat-toolbar>
-    <app-reporting></app-reporting>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
