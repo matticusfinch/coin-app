@@ -1,4 +1,4 @@
-@import 'firebaseui/dist/firebaseui.css';
+@import 'firebaseui/dist/firebaseui.css'; //Needed for login page
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
@@ -11,4 +11,5 @@
 * {
     margin:0;
     padding:0;
+    font-family: 'Roboto', sans-serif;
 }
