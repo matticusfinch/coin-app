@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './coin-manager/login/login.component';
+import { LoginComponent } from './main-landing/login/login.component';
 import { HomePageComponent } from './main-landing/home-page/home-page.component';
 import { AccountComponent } from './coin-manager/account/account.component';
 import { CoinListComponent } from './coin-manager/coins/coin-list/coin-list.component';

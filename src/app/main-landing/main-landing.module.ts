@@ -4,16 +4,19 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { MaterialModule } from '../shared/material/material.module';
 import { RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     HomePageComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
   ],
   exports: [
     HomePageComponent,
-    NavComponent
+    NavComponent,
+    LoginComponent
   ],
   imports: [
     MaterialModule,

@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { LoginComponent } from './login/login.component'
 import { MaterialModule } from '../shared/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -15,7 +14,6 @@ import { CoinService } from '../services/coin.service';
 
 @NgModule({
   declarations: [
-    LoginComponent,
     DashboardComponent,
     ReportingComponent,
     AccountComponent,
@@ -24,7 +22,6 @@ import { CoinService } from '../services/coin.service';
     CoinListComponent
   ],
   exports: [
-    LoginComponent,
     DashboardComponent
   ],
   imports: [
