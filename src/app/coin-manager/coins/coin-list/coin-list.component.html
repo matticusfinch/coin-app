@@ -1,5 +1,5 @@
-<div class="grid grid-cols-12 mt-40 gap-4">
-    <div class="col-span-3" *ngFor="let card of cards">
+<div class="grid grid-cols-4 mt-4 gap-4">
+    <div class="col-span-4 sm:col-span-1" *ngFor="let card of cards">
       <app-coin-card-template [coin]="card"></app-coin-card-template>
     </div>
 </div>
