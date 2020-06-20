@@ -11,6 +11,7 @@ import { DeleteComponent } from './account/delete/delete.component';
 import { CoinCardTemplateComponent } from './coins/coin-card-template/coin-card-template.component';
 import { CoinListComponent } from './coins/coin-list/coin-list.component';
 import { CoinService } from '../services/coin.service';
+import { WhatsHotComponent } from './whats-hot/whats-hot.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CoinService } from '../services/coin.service';
     AccountComponent,
     DeleteComponent,
     CoinCardTemplateComponent,
-    CoinListComponent
+    CoinListComponent,
+    WhatsHotComponent
   ],
   exports: [
     DashboardComponent

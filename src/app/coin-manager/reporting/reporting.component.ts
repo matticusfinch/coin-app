@@ -13,18 +13,18 @@ export class ReportingComponent {
     map(({ matches }) => {
       if (matches) {
         return [
+          { title: 'Coins by Grade', cols: 1, rows: 1 },
+          { title: 'Most Recent', cols: 1, rows: 1 },
           { title: 'Total Coins Collected', cols: 1, rows: 1 },
-          { title: 'Card 2', cols: 1, rows: 1 },
-          { title: 'Card 3', cols: 1, rows: 1 },
-          { title: 'Card 4', cols: 1, rows: 1 }
+          { title: 'Coins by Denomination', cols: 1, rows: 1 }
         ];
       }
 
       return [
-        { title: 'Total Coins Collected ', cols: 2, rows: 1 },
-        { title: 'Card 2', cols: 1, rows: 1 },
-        { title: 'Card 3', cols: 1, rows: 2 },
-        { title: 'Card 4', cols: 1, rows: 1 }
+        { title: 'Coins by Grade', cols: 2, rows: 1 },
+        { title: 'Most Recent', cols: 1, rows: 1 },
+        { title: 'Total Coins Collected', cols: 1, rows: 2 },
+        { title: 'Coins by Denomination', cols: 1, rows: 1 }
       ];
     })
   );
