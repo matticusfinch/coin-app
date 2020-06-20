@@ -1,10 +1,17 @@
 .main-area {
-    background-image: url('/assets/img/waves.svg');
-    background-size: cover;
+    background-image: url('/assets/img/login-background.png');
 }
 
 h1 {
     background-color: black;
     padding: .75rem;
     color: white;
+    border-radius: 0.5rem;
+}
+
+.login {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
