@@ -1,6 +1,7 @@
 .main-area {
     background-image: url('/assets/img/background.png');
     background-size: cover;
+    height: 95vh;
 }
 
 h1 {
@@ -9,4 +10,9 @@ h1 {
     margin-right: 8rem;
     color: white;
     border-radius: 0.5rem;
+}
+
+#get {
+    background-color: #F76E6A;
+    color: white;
 }
