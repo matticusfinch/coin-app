@@ -1,5 +1,6 @@
 <mat-toolbar-row class="menu">
     <img src="assets/img/logo.png"/>
     <span class="spacer"></span>
+    <mat-slide-toggle [checked]="isDarkTheme | async" (change)="toggleDarkTheme($event.checked)">Dark theme</mat-slide-toggle>
     <button mat-raised-button routerLink="/login">LOGIN</button>
 </mat-toolbar-row>

@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { AuthService } from './services/auth.service';
 import { CoinService } from './services/coin.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ThemeService } from './services/theme.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [AuthService, CoinService],
+  providers: [AuthService, CoinService, ThemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

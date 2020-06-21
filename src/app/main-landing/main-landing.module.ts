@@ -6,6 +6,7 @@ import { MaterialModule } from '../shared/material/material.module';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PrivacyComponent } from './privacy/privacy.component';
   ],
   imports: [
     MaterialModule,
-    RouterModule
+    RouterModule,
+    CommonModule
   ]
 })
 export class MainLandingModule { }

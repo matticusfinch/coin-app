@@ -6,6 +6,7 @@ import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 import { MatSidenav } from '@angular/material/sidenav';
 import { MatDialog } from '@angular/material/dialog';
 import { WhatsHotComponent } from '../whats-hot/whats-hot.component';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,6 +14,7 @@ import { WhatsHotComponent } from '../whats-hot/whats-hot.component';
   styleUrls: ['dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  isDarkTheme: Observable<boolean>;
   @ViewChild('drawer') drawer: MatSidenav;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -22,6 +24,7 @@ export class DashboardComponent implements OnInit {
     );
 
   constructor(
+    private themeService: ThemeService,
     private breakpointObserver: BreakpointObserver,
     private router: Router, 
     public dialog: MatDialog) {
@@ -35,8 +38,10 @@ export class DashboardComponent implements OnInit {
     this.dialog.open(WhatsHotComponent);
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.isDarkTheme = this.themeService.isDarkTheme;
   }
+  
 }
 
 
