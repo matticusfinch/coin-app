@@ -35,6 +35,7 @@
             <mat-icon aria-label="Home icon">home</mat-icon>
         </button>
         <span class="spacer"></span>
+        <mat-slide-toggle [checked]="isDarkTheme | async" (change)="toggleDarkTheme($event.checked)"><mat-icon>nights_stay</mat-icon></mat-slide-toggle>
         <button
           mat-icon-button>
           <mat-icon aria-label="What's New Icon" (click)="openDialog()">whatshot</mat-icon>

@@ -7,6 +7,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { MatDialog } from '@angular/material/dialog';
 import { WhatsHotComponent } from '../whats-hot/whats-hot.component';
 import { ThemeService } from '../../services/theme.service';
+import {OverlayContainer} from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-dashboard',
@@ -27,7 +28,9 @@ export class DashboardComponent implements OnInit {
     public themeService: ThemeService,
     private breakpointObserver: BreakpointObserver,
     private router: Router, 
-    public dialog: MatDialog) {
+    public dialog: MatDialog,
+    overlayContainer: OverlayContainer) {
+    overlayContainer.getContainerElement().classList.add('dark-theme');
     router.events.pipe(
       withLatestFrom(this.isHandset$),
       filter(([a, b]) => b && a instanceof NavigationEnd)
@@ -42,6 +45,8 @@ export class DashboardComponent implements OnInit {
     this.isDarkTheme = this.themeService.isDarkTheme;
   }
   
+  toggleDarkTheme(checked: boolean) {
+    this.themeService.setDarkTheme(checked);
+  }
+  
 }
-
-
