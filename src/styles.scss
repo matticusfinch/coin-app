@@ -6,6 +6,50 @@
 
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import '@angular/material/_theming.scss';
+
+@include mat-core(); 
+
+$sortared: (
+    50 : #feeeed,
+    100 : #fdd4d2,
+    200 : #fbb7b5,
+    300 : #f99a97,
+    400 : #f88480,
+    500 : #f76e6a,
+    600 : #f66662,
+    700 : #f55b57,
+    800 : #f3514d,
+    900 : #f13f3c,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffd8d7,
+    A700 : #ffbfbe,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$light-primary: mat-palette($sortared);
+$light-accent:  mat-palette($mat-pink, A200, A100, A400);
+$light-theme:   mat-light-theme($light-primary, $light-accent);
+
+@include angular-material-theme($light-theme);
+
+
 
 * {
     margin:0;
