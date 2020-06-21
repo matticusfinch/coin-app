@@ -24,7 +24,7 @@ export class DashboardComponent implements OnInit {
     );
 
   constructor(
-    private themeService: ThemeService,
+    public themeService: ThemeService,
     private breakpointObserver: BreakpointObserver,
     private router: Router, 
     public dialog: MatDialog) {
