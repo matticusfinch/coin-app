@@ -37,10 +37,6 @@
         <span class="spacer"></span>
         <mat-slide-toggle [checked]="isDarkTheme | async" (change)="toggleDarkTheme($event.checked)"><mat-icon>nights_stay</mat-icon></mat-slide-toggle>
         <button
-          mat-icon-button>
-          <mat-icon aria-label="What's New Icon" (click)="openDialog()">whatshot</mat-icon>
-        </button>
-        <button
           mat-icon-button
           [matMenuTriggerFor]="account">
           <mat-icon aria-label="Account access icon">account_circle</mat-icon>
@@ -49,6 +45,10 @@
           <button mat-menu-item [routerLink]="['account']">
             <mat-icon aria-label="My account icon">face</mat-icon>
             <span>Account</span>
+          </button>
+          <button mat-menu-item (click)="openDialog()">
+            <mat-icon aria-label="What's New Icon">whatshot</mat-icon>
+            <span>What's New</span>
           </button>
           <button mat-menu-item [routerLink]="['']">
             <mat-icon aria-label="Logout icon">exit_to_app</mat-icon>
