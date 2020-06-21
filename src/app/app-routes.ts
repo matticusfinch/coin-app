@@ -6,6 +6,7 @@ import { CoinListComponent } from './coin-manager/coins/coin-list/coin-list.comp
 import { AppComponent } from './app.component';
 import { ReportingComponent } from './coin-manager/reporting/reporting.component';
 import { DashboardComponent } from './coin-manager/dashboard/dashboard.component';
+import { PrivacyComponent } from './main-landing/privacy/privacy.component';
 
 export const appRoutes: Routes = [
   {
@@ -13,7 +14,8 @@ export const appRoutes: Routes = [
     component: AppComponent,
     children: [
       { path: '', component: HomePageComponent },
-      { path: 'login', component: LoginComponent }
+      { path: 'login', component: LoginComponent },
+      { path: 'privacy-policy', component: PrivacyComponent }
     ],
   },
   {

@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MaterialModule } from '../shared/material/material.module';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { LoginComponent } from './login/login.component';
     NavComponent,
     FooterComponent,
     LoginComponent,
+    PrivacyComponent,
   ],
   exports: [
     HomePageComponent,
