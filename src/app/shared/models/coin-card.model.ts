@@ -3,4 +3,7 @@ export class CoinCard {
   description: string;
   img: string;
   year: number;
+  edge: string;
+  mintMark: string;
+  mintage: number;
 }
