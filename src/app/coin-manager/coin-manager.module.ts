@@ -12,7 +12,6 @@ import { CoinCardTemplateComponent } from './coins/coin-card-template/coin-card-
 import { CoinListComponent } from './coins/coin-list/coin-list.component';
 import { CoinService } from '../services/coin.service';
 import { WhatsHotComponent } from './whats-hot/whats-hot.component';
-import * as firebase from 'firebase';
 
 @NgModule({
   declarations: [
@@ -40,25 +39,3 @@ import * as firebase from 'firebase';
   ]
 })
 export class CoinManagerModule { }
-
-const initApp = function() {
-  firebase.auth().onAuthStateChanged(function(user) {
-    
-    if (user) {
-      // User is signed in.
-      var displayName = user.displayName;
-      var email = user.email;
-      var emailVerified = user.emailVerified;
-      var photoURL = user.photoURL;
-      var uid = user.uid;
-      var phoneNumber = user.phoneNumber;
-      var providerData = user.providerData;
-      alert(JSON.stringify('Hello ' + displayName, null, 4));
-    } else {
-    }
-  })
-};
-
-window.addEventListener('load', function() {
-  initApp();
-});
