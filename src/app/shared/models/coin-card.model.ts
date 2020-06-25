@@ -1,3 +1,5 @@
+import { FocusKeyManager } from '@angular/cdk/a11y';
+
 export class CoinCard {
   denom: string;
   description: string;
@@ -6,4 +8,6 @@ export class CoinCard {
   edge: string;
   mintMark: string;
   mintage: number;
+  monarch: string;
+  monarchImg: string;
 }
