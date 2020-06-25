@@ -4,7 +4,7 @@ import { CoinCard } from 'src/app/shared/models/coin-card.model';
 @Component({
   selector: 'app-coin-card-template',
   templateUrl: './coin-card-template.component.html',
-  styleUrls: ['./coin-card-template.component.css']
+  styleUrls: ['./coin-card-template.component.scss']
 })
 export class CoinCardTemplateComponent implements OnInit {
 
