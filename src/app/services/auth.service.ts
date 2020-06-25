@@ -5,6 +5,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import * as firebase from 'firebase';
 import * as firebaseui from 'firebaseui';
 import { environment } from 'src/environments/environment';
+import { switchMap } from 'rxjs/operators';
+import { of } from 'rxjs';
 
 firebase.initializeApp(environment.firebase);
 
@@ -29,29 +31,39 @@ const uiConfig = {
 };
 
 
-
 @Injectable()
 export class AuthService {
 
-  userData: any;
-  ui: any;
+  private userData: any;
+  private ui: any;
 
   constructor(
     public afAuth: AngularFireAuth,
     public router: Router,
     public afs: AngularFirestore) {
 
-      this.afAuth.authState.subscribe(
-        user => {
-
-        }
+    this.userData = this.afAuth.authState.pipe(
+        switchMap(user => {
+          if (user) {
+            return this.afs.doc<firebase.User>(`users/${user.uid}`).valueChanges();
+          } else {
+            return of(null);
+          }
+        })
       );
     }
 
     startUI(container: string) {
-      this.ui = new firebaseui.auth.AuthUI(firebase.auth());
+      this.ui = firebaseui.auth.AuthUI.getInstance() || new firebaseui.auth.AuthUI(firebase.auth());
       this.ui.start('#firebaseui-auth-container', uiConfig);
     }
 
+    async signOut() {
+      await this.afAuth.signOut();
+      this.router.navigate(['']);
+    }
 
+    stopUI() {
+     this.ui.delete();
+    }
 }

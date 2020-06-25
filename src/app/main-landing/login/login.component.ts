@@ -6,11 +6,15 @@ import { AuthService } from 'src/app/services/auth.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
 
   constructor(public authService: AuthService) { }
 
   ngOnInit(): void {
     this.authService.startUI('#firebaseui-auth-container');
-   }
+  }
+
+  ngOnDestroy(): void {
+    this.authService.stopUI();
+  }
 }

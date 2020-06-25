@@ -24,7 +24,7 @@
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-      <mat-toolbar color="primary">        
+      <mat-toolbar color="primary">
         <button
           mat-icon-button
           (click)="drawer.open()"
@@ -50,7 +50,7 @@
             <mat-icon aria-label="What's New Icon">whatshot</mat-icon>
             <span>What's New</span>
           </button>
-          <button mat-menu-item [routerLink]="['']">
+          <button mat-menu-item (click)="signOut()">
             <mat-icon aria-label="Logout icon">exit_to_app</mat-icon>
             <span>Logout</span>
           </button>
@@ -59,4 +59,3 @@
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
-  

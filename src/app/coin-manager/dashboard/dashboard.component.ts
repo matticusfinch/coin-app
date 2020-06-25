@@ -8,6 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { WhatsHotComponent } from '../whats-hot/whats-hot.component';
 import { ThemeService } from '../../services/theme.service';
 import {OverlayContainer} from '@angular/cdk/overlay';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -27,16 +28,18 @@ export class DashboardComponent implements OnInit {
   constructor(
     public themeService: ThemeService,
     private breakpointObserver: BreakpointObserver,
-    private router: Router, 
+    private router: Router,
     public dialog: MatDialog,
-    overlayContainer: OverlayContainer) {
+    overlayContainer: OverlayContainer,
+    public authServie: AuthService
+    ) {
     overlayContainer.getContainerElement().classList.add('dark-theme');
     router.events.pipe(
       withLatestFrom(this.isHandset$),
       filter(([a, b]) => b && a instanceof NavigationEnd)
     ).subscribe(_ => this.drawer.close());
   }
-  
+
   openDialog() {
     this.dialog.open(WhatsHotComponent);
   }
@@ -44,9 +47,12 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.isDarkTheme = this.themeService.isDarkTheme;
   }
-  
+
   toggleDarkTheme(checked: boolean) {
     this.themeService.setDarkTheme(checked);
   }
-  
+
+  signOut() {
+    this.authServie.signOut();
+  }
 }
