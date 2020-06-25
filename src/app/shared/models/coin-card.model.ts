@@ -10,4 +10,5 @@ export class CoinCard {
   mintage: number;
   monarch: string;
   monarchImg: string;
+  size: string;
 }

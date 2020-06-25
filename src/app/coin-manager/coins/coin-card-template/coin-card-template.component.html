@@ -1,11 +1,11 @@
 <mat-card matRipple class="cursor-pointer">
     <div class="grid">
-        <div class="p-8">
+        <div [ngClass]="coin.size == 'small' ? 'p-16 sm:p-20' : 'p-8 sm:p-12'">
             <img mat-card-image src="{{coin.img}}" alt="{{coin.year}} {{coin.denom}}">
         </div>
         <div class="flex items-center justify-between">
             <span class="text-2xl">{{coin.year}}</span>
-            <img src="{{coin.monarchImg}}" alt="{{coin.monarchImg}} Portait">
+            <img *ngIf="coin.monarchImg" src="{{coin.monarchImg}}" alt="{{coin.monarchImg}} Portait">
         </div>
     </div>
 </mat-card>
