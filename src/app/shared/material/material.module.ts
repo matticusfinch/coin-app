@@ -18,6 +18,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
+import {MatRippleModule} from '@angular/material/core';
 
 const mm = [ 
   MatButtonModule,
@@ -37,7 +38,8 @@ const mm = [
   MatSidenavModule,
   MatListModule,
   MatCardModule,
-  MatDividerModule
+  MatDividerModule,
+  MatRippleModule
 ];
 
 @NgModule({
