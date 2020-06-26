@@ -9,6 +9,7 @@ import { CoinCard } from 'src/app/shared/models/coin-card.model';
 export class CoinCardTemplateComponent implements OnInit {
 
   @Input() coin: CoinCard; // write coin with attribute e.g coin.year
+  @Input() denom: string; // write coin with attribute e.g coin.year
 
   constructor() { }
 

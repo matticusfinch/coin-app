@@ -18,9 +18,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
-import {MatRippleModule} from '@angular/material/core';
+import { MatRippleModule } from '@angular/material/core';
+import { MatChipsModule } from '@angular/material/chips';
 
-const mm = [ 
+const mm = [
   MatButtonModule,
   MatGridListModule,
   MatMenuModule,
@@ -39,12 +40,13 @@ const mm = [
   MatListModule,
   MatCardModule,
   MatDividerModule,
-  MatRippleModule
+  MatRippleModule,
+  MatChipsModule
 ];
 
 @NgModule({
   declarations: [],
   imports: [...mm],
-  exports: [...mm]
+  exports: [...mm],
 })
-export class MaterialModule { }
+export class MaterialModule {}
