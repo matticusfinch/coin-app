@@ -8,6 +8,9 @@ import { ReportingComponent } from './coin-manager/reporting/reporting.component
 import { DashboardComponent } from './coin-manager/dashboard/dashboard.component';
 import { PrivacyComponent } from './main-landing/privacy/privacy.component';
 import { CoinDetailsComponent } from './coin-manager/coins/coin-details/coin-details.component';
+import { AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 
 export const appRoutes: Routes = [
   {
@@ -23,10 +26,14 @@ export const appRoutes: Routes = [
     path: 'dashboard',
     component: DashboardComponent,
     children: [
-      { path: '', component: ReportingComponent },
-      { path: 'coins/:denom', component: CoinListComponent },
-      { path: 'account', component: AccountComponent },
-      { path: 'coins/:denom/:year', component: CoinDetailsComponent }
+      { path: '',
+        component: ReportingComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin}},
+      { path: 'account',
+        component: AccountComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin} },
+      { path: 'coins/:denom',
+        component: CoinListComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin}},
+      { path: 'coins/:denom/:year',
+        component: CoinDetailsComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin}}
     ],
   },
 ];
