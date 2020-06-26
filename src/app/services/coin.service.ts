@@ -4,10 +4,18 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class CoinService {
-
   constructor(public firestore: AngularFirestore) {}
 
   getCoinList(denomination: string): Observable<any[]> {
-    return this.firestore.collection(`coins/newfoundland/${denomination}`).valueChanges();
+    return this.firestore
+      .collection(`coins/newfoundland/${denomination}`)
+      .valueChanges();
+  }
+
+  getCoinDetail(denomination: string, year: number): Observable<any> {
+    return this.firestore
+      .collection(`coins/newfoundland/${denomination}`)
+      .doc(`${year}`)
+      .valueChanges();
   }
 }

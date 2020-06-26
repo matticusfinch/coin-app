@@ -1,6 +1,4 @@
-import { FocusKeyManager } from '@angular/cdk/a11y';
-
-export class CoinCard {
+export class Coin {
   denom: string;
   description: string;
   img: string;
