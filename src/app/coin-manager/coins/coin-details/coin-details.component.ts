@@ -9,6 +9,7 @@ import { CoinService } from 'src/app/services/coin.service';
   styleUrls: ['./coin-details.component.css'],
 })
 export class CoinDetailsComponent implements OnInit {
+  panelOpenState = false;
   coin: Coin;
   denomination: string;
   year: number;

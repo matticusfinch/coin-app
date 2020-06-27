@@ -20,6 +20,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatRippleModule } from '@angular/material/core';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatExpansionModule } from '@angular/material/expansion';
+
 
 const mm = [
   MatButtonModule,
@@ -41,7 +43,8 @@ const mm = [
   MatCardModule,
   MatDividerModule,
   MatRippleModule,
-  MatChipsModule
+  MatChipsModule,
+  MatExpansionModule
 ];
 
 @NgModule({

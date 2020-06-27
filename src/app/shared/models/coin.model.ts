@@ -9,4 +9,11 @@ export class Coin {
   monarch: string;
   monarchImg: string;
   size: string;
+  composition: string;
+  designer: string;
+  diameter: number;
+  dieAxis: string;
+  engraver: string;
+  mintedBy: string;
+  weight: number;
 }

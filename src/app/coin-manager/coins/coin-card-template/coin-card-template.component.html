@@ -4,8 +4,8 @@
             <img mat-card-image src="{{coin.img}}" alt="{{coin.year}} {{coin.denom}}">
         </div>
         <div class="flex items-center justify-between">
-            <span class="text-2xl">{{coin.year}}</span>
-            <img *ngIf="coin.monarchImg" src="{{coin.monarchImg}}" alt="{{coin.monarchImg}} Portait">
+            <span class="text-2xl py-1 px-2 rounded bg-gray-800 text-white">{{coin.year}}</span>
+            <img *ngIf="coin.monarchImg" src="{{coin.monarchImg}}" alt="{{coin.monarch}} Portait">
         </div>
     </div>
 </mat-card>
