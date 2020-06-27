@@ -1,3 +1,8 @@
+export class Side {
+  Obverse: string;
+  Reverse: string;
+}
+
 export class Coin {
   denom: string;
   description: string;
@@ -10,10 +15,10 @@ export class Coin {
   monarchImg: string;
   size: string;
   composition: string;
-  designer: string;
+  designer: Side;
   diameter: number;
   dieAxis: string;
-  engraver: string;
+  engraver: Side;
   mintedBy: string;
   weight: number;
 }
