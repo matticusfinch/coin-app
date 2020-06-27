@@ -9,6 +9,7 @@ export class Coin {
   img: string;
   year: number;
   edge: string;
+  mintedBy: string;
   mintMark: string;
   mintage: number;
   monarch: string;
@@ -16,9 +17,8 @@ export class Coin {
   size: string;
   composition: string;
   designer: Side;
+  engraver: Side;
   diameter: number;
   dieAxis: string;
-  engraver: Side;
-  mintedBy: string;
   weight: number;
 }

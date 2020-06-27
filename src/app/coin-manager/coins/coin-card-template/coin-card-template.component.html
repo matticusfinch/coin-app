@@ -1,6 +1,6 @@
 <mat-card matRipple class="cursor-pointer" routerLink="/dashboard/coins/{{denom}}/{{coin.year}}">
     <div class="grid">
-        <div [ngClass]="coin.size == 'small' ? 'p-16 sm:p-20' : 'p-8 sm:p-12'">
+        <div [ngClass]="coin.size == 'Small' ? 'p-12' : 'p-4 sm:p-6'">
             <img mat-card-image src="{{coin.img}}" alt="{{coin.year}} {{coin.denom}}">
         </div>
         <div class="flex items-center justify-between">
