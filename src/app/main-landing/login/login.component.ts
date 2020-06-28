@@ -9,7 +9,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class LoginComponent implements OnInit, OnDestroy {
 
-  constructor(public authService: AuthService, public titleService: Title) { }
+  constructor(public authService: AuthService, private titleService: Title) { }
 
   ngOnInit(): void {
     this.authService.startUI('#firebaseui-auth-container');

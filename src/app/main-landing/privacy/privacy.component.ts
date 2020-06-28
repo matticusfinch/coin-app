@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class PrivacyComponent implements OnInit {
 
-  constructor(public titleService: Title) { }
+  constructor(private titleService: Title) { }
 
   ngOnInit(): void {
     this.titleService.setTitle('Privacy Policy | Coin Manager');
