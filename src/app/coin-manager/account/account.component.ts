@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DeleteComponent } from './delete/delete.component'
+import { DeleteComponent } from './delete/delete.component';
 
 @Component({
   selector: 'app-account',

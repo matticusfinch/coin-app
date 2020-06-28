@@ -21,4 +21,5 @@ export class Coin {
   diameter: number;
   dieAxis: string;
   weight: number;
+  varieties: string;
 }

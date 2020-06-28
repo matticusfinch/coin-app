@@ -1,6 +1,6 @@
 <div *ngIf="coin" class="m-4">
     <div class="grid grid-cols-12 pb-4 gap-4">
-        <div class="col-span-12 sm:col-span-8">
+        <div class="col-span-12 sm:col-span-4">
             <mat-card>
                 <mat-card-title>{{coin.year}} - {{coin.denom}}</mat-card-title>
                 <mat-card-content>{{coin.description}}</mat-card-content>
@@ -8,47 +8,40 @@
         </div>
         <div class="col-span-12 sm:col-span-4">
             <mat-card>
-                <mat-card-title>Details</mat-card-title>
+                <mat-card-title>Mint Information</mat-card-title>
                 <mat-card-subtitle>Mintage: {{coin.mintage}}</mat-card-subtitle>
+                <mat-card-subtitle>Minted by: {{coin.mintedBy}}</mat-card-subtitle>
+                <mat-card-subtitle>Mint Mark: {{coin.mintMark}}</mat-card-subtitle>
+            </mat-card>
+        </div>
+        <div class="col-span-12 sm:col-span-4">
+            <mat-card>
+                <mat-card-title>Details</mat-card-title>
                 <mat-card-subtitle>Diameter: {{coin.diameter}}mm</mat-card-subtitle>
                 <mat-card-subtitle>Weight: {{coin.weight}}g</mat-card-subtitle>
                 <mat-card-subtitle>Die Axis: {{coin.dieAxis}}</mat-card-subtitle>
                 <mat-card-subtitle>Edge: {{coin.edge}}</mat-card-subtitle>
                 <mat-card-subtitle>Composition: {{coin.composition}}</mat-card-subtitle>
                 <mat-card-subtitle>Designer Obv.: {{coin.designer.Obverse}}</mat-card-subtitle>
-                <mat-card-subtitle>Designer Rev.: {{coin.designer.Reverse}}</mat-card-subtitle>
+                <mat-card-subtitle>Designer Rev.: <button mat-button (click)="openDialog()">{{coin.designer.Reverse}}</button></mat-card-subtitle>
                 <mat-card-subtitle>Engraver Obv.: {{coin.engraver.Obverse}}</mat-card-subtitle>
                 <mat-card-subtitle>Engraver Rev.: {{coin.engraver.Reverse}}</mat-card-subtitle>
-                <mat-card-subtitle>Minted by: {{coin.mintedBy}}</mat-card-subtitle>
-                <mat-card-subtitle>Mint Mark: {{coin.mintMark}}</mat-card-subtitle>
                 <mat-card-subtitle>Monarch: {{coin.monarch}}</mat-card-subtitle>
                 <mat-card-subtitle>Size: {{coin.size}}</mat-card-subtitle>
             </mat-card>
         </div>
     </div>
-    <mat-accordion>
-        <mat-expansion-panel hideToggle>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              This is the expansion title
-            </mat-panel-title>
-            <mat-panel-description>
-              This is a summary of the content
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>This is the primary content of the panel.</p>
-        </mat-expansion-panel>
-        <mat-expansion-panel (opened)="panelOpenState = true"
-                             (closed)="panelOpenState = false">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Self aware panel
-            </mat-panel-title>
-            <mat-panel-description>
-              Currently I am {{panelOpenState ? 'open' : 'closed'}}
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>I'm visible because I am open</p>
-        </mat-expansion-panel>
-      </mat-accordion>
+    <div class="grid grid-cols-12 pb-4 gap-4">
+      <div class="col-span-12 sm:col-span-3" *ngFor="let variety of coin.varieties">
+        <mat-card matRipple class="cursor-pointer outline-none">
+          <div class="grid">
+              <div class="flex items-center">
+                  <span class="text-2xl py-1 px-2 rounded bg-gray-800 text-white">{{variety}}</span>
+              </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
 </div>
+
+
