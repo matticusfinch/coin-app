@@ -14,3 +14,6 @@ You'll be able to upload a photo and hopefully firebase machine learning will be
 ## To get Started
 
 Login and you'll be on a dashboard, in the menu on the left you can upload coins.
+
+## Instructions
+`ng build --prod && firebase deploy`
