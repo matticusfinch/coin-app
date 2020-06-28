@@ -16,6 +16,7 @@ import { AuthService } from './services/auth.service';
 import { CoinService } from './services/coin.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ThemeService } from './services/theme.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ThemeService } from './services/theme.service';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [AuthService, CoinService, ThemeService],
   bootstrap: [AppComponent]
