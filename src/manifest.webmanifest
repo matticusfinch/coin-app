@@ -1,8 +1,8 @@
 {
   "name": "Coin Manager",
   "short_name": "Coin Manager",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "#f76e6a",
+  "background_color": "#fff",
   "display": "standalone",
   "scope": "/",
   "start_url": "/dashboard",
