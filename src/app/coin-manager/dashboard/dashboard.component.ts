@@ -50,7 +50,11 @@ export class DashboardComponent implements OnInit {
 
   toggleDarkTheme(checked: boolean) {
     this.themeService.setDarkTheme(checked);
-    this.overlayContainer.getContainerElement().classList.add('dark-theme');
+    if (checked) {
+      this.overlayContainer.getContainerElement().classList.add('dark-theme');
+    } else {
+      this.overlayContainer.getContainerElement().classList.remove('dark-theme');
+    }
   }
 
   signOut() {

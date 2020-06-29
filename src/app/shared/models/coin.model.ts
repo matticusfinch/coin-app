@@ -1,6 +1,7 @@
 export class Side {
   Obverse: string;
   Reverse: string;
+  reverse: string;
 }
 
 export class Coin {

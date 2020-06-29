@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>{{artist.name}}</h1>
+<div mat-dialog-content>
+    <div class="grid grid-cols-12 container">
+        <div class="col-span-4">
+            <img src={{artist.img}}>
+        </div>
+        <div class="col-span-8">
+            <p>{{artist.bio}}</p>
+            <p>Born: {{artist.born}}</p>
+            <p>Died: {{artist.died}}</p>
+        </div>
+    </div>
+</div>
+<div mat-dialog-actions class="justify-between">
+    <a mat-raised-button [href]="artist.wiki" target="_blank">MORE INFO</a>
+    <button mat-button mat-dialog-close>CLOSE</button>
+</div>

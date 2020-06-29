@@ -17,6 +17,7 @@ import { CoinService } from './services/coin.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ThemeService } from './services/theme.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { InfoService } from './services/info.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [AuthService, CoinService, ThemeService],
+  providers: [AuthService, CoinService, ThemeService, InfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

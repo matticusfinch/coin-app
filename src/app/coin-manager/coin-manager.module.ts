@@ -13,7 +13,7 @@ import { CoinListComponent } from './coins/coin-list/coin-list.component';
 import { CoinService } from '../services/coin.service';
 import { WhatsHotComponent } from './whats-hot/whats-hot.component';
 import { CoinDetailsComponent } from './coins/coin-details/coin-details.component';
-import { LeonardComponent } from './coins/info-panels/leonard/leonard.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,6 @@ import { LeonardComponent } from './coins/info-panels/leonard/leonard.component'
     CoinListComponent,
     WhatsHotComponent,
     CoinDetailsComponent,
-    LeonardComponent
   ],
   exports: [
     DashboardComponent
@@ -36,7 +35,8 @@ import { LeonardComponent } from './coins/info-panels/leonard/leonard.component'
     ReactiveFormsModule,
     LayoutModule,
     CommonModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ],
   providers: [
     CoinService

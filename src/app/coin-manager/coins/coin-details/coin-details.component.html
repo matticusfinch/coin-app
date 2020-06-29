@@ -23,7 +23,7 @@
                 <mat-card-subtitle>Edge: {{coin.edge}}</mat-card-subtitle>
                 <mat-card-subtitle>Composition: {{coin.composition}}</mat-card-subtitle>
                 <mat-card-subtitle>Designer Obv.: {{coin.designer.Obverse}}</mat-card-subtitle>
-                <mat-card-subtitle>Designer Rev.: <button mat-button (click)="openDialog()">{{coin.designer.Reverse}}</button></mat-card-subtitle>
+                <mat-card-subtitle>Designer Rev.: <button mat-button (click)="getArtistInfo(coin.engraver.reverse)">{{coin.designer.Reverse}}</button></mat-card-subtitle>
                 <mat-card-subtitle>Engraver Obv.: {{coin.engraver.Obverse}}</mat-card-subtitle>
                 <mat-card-subtitle>Engraver Rev.: {{coin.engraver.Reverse}}</mat-card-subtitle>
                 <mat-card-subtitle>Monarch: {{coin.monarch}}</mat-card-subtitle>
@@ -32,5 +32,6 @@
         </div>
     </div>
 </div>
+
 
 
