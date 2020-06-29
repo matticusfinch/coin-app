@@ -30,10 +30,10 @@ export class DashboardComponent implements OnInit {
     private breakpointObserver: BreakpointObserver,
     private router: Router,
     public dialog: MatDialog,
-    overlayContainer: OverlayContainer,
+    private overlayContainer: OverlayContainer,
     public authServie: AuthService
     ) {
-    overlayContainer.getContainerElement().classList.add('dark-theme');
+
     router.events.pipe(
       withLatestFrom(this.isHandset$),
       filter(([a, b]) => b && a instanceof NavigationEnd)
@@ -50,6 +50,7 @@ export class DashboardComponent implements OnInit {
 
   toggleDarkTheme(checked: boolean) {
     this.themeService.setDarkTheme(checked);
+    this.overlayContainer.getContainerElement().classList.add('dark-theme');
   }
 
   signOut() {
