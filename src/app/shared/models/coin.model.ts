@@ -5,6 +5,11 @@ export class Side {
   obverseLink: string;
 }
 
+export class Variety {
+  type: string;
+  name: string;
+}
+
 export class Coin {
   denom: string;
   description: string;
@@ -23,6 +28,6 @@ export class Coin {
   diameter: number;
   dieAxis: string;
   weight: number;
-  varieties: string;
+  varieties: Variety[];
   monarchLink: string;
 }
