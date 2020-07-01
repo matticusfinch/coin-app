@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ArtistDialogComponent } from './info-dialogs/artist/artist-dialog.component';
 import { MaterialModule } from './material/material.module';
+
+import { ArtistDialogComponent } from './info-dialogs/artist/artist-dialog.component';
+import { MonarchDialogComponent } from './info-dialogs/monarch/monarch-dialog.component';
+import { MintDialogComponent } from './info-dialogs/mint/mint-dialog.component';
 
 @NgModule({
   declarations: [
-    ArtistDialogComponent
+    ArtistDialogComponent,
+    MonarchDialogComponent,
+    MintDialogComponent
   ],
   exports: [
     ArtistDialogComponent,

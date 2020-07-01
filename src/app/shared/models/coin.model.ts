@@ -1,7 +1,8 @@
 export class Side {
   Obverse: string;
   Reverse: string;
-  reverse: string;
+  reverseLink: string;
+  obverseLink: string;
 }
 
 export class Coin {
@@ -23,4 +24,5 @@ export class Coin {
   dieAxis: string;
   weight: number;
   varieties: string;
+  monarchLink: string;
 }

@@ -5,13 +5,13 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class InfoService {
+export class HistoryInfoService {
 
   constructor(public firestore: AngularFirestore) { }
 
-  getArtistInfo(artist: string): Observable<any> {
+  getHistoryInfo(refPath: string): Observable<any> {
     return this.firestore
-    .doc(artist)
+    .doc(refPath)
     .valueChanges();
   }
 }

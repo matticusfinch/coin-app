@@ -22,11 +22,11 @@
                 <mat-card-subtitle>Die Axis: {{coin.dieAxis}}</mat-card-subtitle>
                 <mat-card-subtitle>Edge: {{coin.edge}}</mat-card-subtitle>
                 <mat-card-subtitle>Composition: {{coin.composition}}</mat-card-subtitle>
-                <mat-card-subtitle>Designer Obv.: {{coin.designer.Obverse}}</mat-card-subtitle>
-                <mat-card-subtitle>Designer Rev.: <button mat-button (click)="getArtistInfo(coin.engraver.reverse)">{{coin.designer.Reverse}}</button></mat-card-subtitle>
-                <mat-card-subtitle>Engraver Obv.: {{coin.engraver.Obverse}}</mat-card-subtitle>
-                <mat-card-subtitle>Engraver Rev.: {{coin.engraver.Reverse}}</mat-card-subtitle>
-                <mat-card-subtitle>Monarch: {{coin.monarch}}</mat-card-subtitle>
+                <mat-card-subtitle>Designer Obv.: <button mat-button [disabled]="!coin.engraver.obverseLink" (click)="getHistory(coin.designer.obverseLink, 'artist')">{{coin.designer.Obverse}}</button></mat-card-subtitle>
+                <mat-card-subtitle>Designer Rev.: <button mat-button [disabled]="!coin.engraver.reverseLink" (click)="getHistory(coin.designer.reverseLink, 'artist')">{{coin.designer.Reverse}}</button></mat-card-subtitle>
+                <mat-card-subtitle>Engraver Obv.: <button mat-button [disabled]="!coin.engraver.obverseLink" (click)="getHistory(coin.engraver.obverseLink, 'artist')">{{coin.engraver.Obverse}}</button></mat-card-subtitle>
+                <mat-card-subtitle>Engraver Rev.: <button mat-button [disabled]="!coin.engraver.reverseLink" (click)="getHistory(coin.engraver.reverseLink, 'artist')">{{coin.engraver.Reverse}}</button></mat-card-subtitle>
+                <mat-card-subtitle>Monarch: <button mat-button [disabled]="!coin.monarchLink" (click)="getHistory(coin.monarchLink, 'monarch')">{{coin.monarch}}</button></mat-card-subtitle>
                 <mat-card-subtitle>Size: {{coin.size}}</mat-card-subtitle>
             </mat-card>
         </div>

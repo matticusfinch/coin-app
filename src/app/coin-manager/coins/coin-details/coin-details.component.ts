@@ -1,10 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ComponentRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Coin } from 'src/app/shared/models/coin.model';
 import { CoinService } from 'src/app/services/coin.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ArtistDialogComponent } from 'src/app/shared/info-dialogs/artist/artist-dialog.component';
-import { InfoService } from 'src/app/services/info.service';
+import { HistoryInfoService } from 'src/app/services/history-info.service';
+import { ComponentType } from '@angular/cdk/portal';
+import { MonarchDialogComponent } from 'src/app/shared/info-dialogs/monarch/monarch-dialog.component';
+import { MintDialogComponent } from 'src/app/shared/info-dialogs/mint/mint-dialog.component';
 
 @Component({
   selector: 'app-coin-details',
@@ -15,20 +18,14 @@ export class CoinDetailsComponent implements OnInit {
   coin: Coin;
   denomination: string;
   year: number;
+  artistComponent: ArtistDialogComponent;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private coinService: CoinService,
-    private infoService: InfoService,
+    private historyInfoService: HistoryInfoService,
     public dialog: MatDialog
   ) { }
-
-  openDialog(artistInfo: any) {
-    const data = {
-      artist: artistInfo
-    };
-    this.dialog.open(ArtistDialogComponent, { data });
-  }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
@@ -46,11 +43,28 @@ export class CoinDetailsComponent implements OnInit {
       });
   }
 
-  getArtistInfo(artist: string) {
-    this.infoService
-      .getArtistInfo(artist)
-      .subscribe((artistInfo) => {
-        this.openDialog(artistInfo);
+  getHistory(path: string, type: string) {
+    this.historyInfoService
+      .getHistoryInfo(path)
+      .subscribe((data) => {
+        this.openInfoPopUp(data, type);
       });
+  }
+
+  openInfoPopUp(information: any, type: string ) {
+    const data = {
+      info: information
+    };
+    this.dialog.open(this.getDialogType(type), { data });
+  }
+
+  getDialogType(type: string) {
+    if (type === 'artist') {
+      return ArtistDialogComponent;
+    } else if (type === 'monarch') {
+      return MonarchDialogComponent;
+    } else {
+      return MintDialogComponent;
+    }
   }
 }
