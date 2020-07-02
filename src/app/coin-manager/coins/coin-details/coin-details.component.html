@@ -9,7 +9,7 @@
         <div class="col-span-12 sm:col-span-4">
             <mat-card>
                 <mat-card-title>Mint Information</mat-card-title>
-                <mat-card-subtitle>Mintage: {{coin.mintage}}</mat-card-subtitle>
+                <mat-card-subtitle>Mintage: {{coin.mintage | number}}</mat-card-subtitle>
                 <mat-card-subtitle>Minted by: <button mat-button [disabled]="!coin.mintLink" (click)="getHistory(coin.mintLink, 'mint')">{{coin.mintedBy}}</button></mat-card-subtitle>
                 <mat-card-subtitle>Mint Mark: {{coin.mintMark}}</mat-card-subtitle>
             </mat-card>

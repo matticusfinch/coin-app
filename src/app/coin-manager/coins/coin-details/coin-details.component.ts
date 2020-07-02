@@ -18,7 +18,6 @@ export class CoinDetailsComponent implements OnInit {
   coin: Coin;
   denomination: string;
   year: number;
-  artistComponent: ArtistDialogComponent;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -55,16 +54,19 @@ export class CoinDetailsComponent implements OnInit {
     const data = {
       info: information
     };
-    this.dialog.open(this.getDialogType(type), { data });
-  }
 
-  getDialogType(type: string) {
-    if (type === 'artist') {
-      return ArtistDialogComponent;
-    } else if (type === 'monarch') {
-      return MonarchDialogComponent;
-    } else {
-      return MintDialogComponent;
+    switch (type) {
+      case 'artist': {
+        this.dialog.open(ArtistDialogComponent, { data });
+        break;
+      }
+      case 'monarch': {
+        this.dialog.open(MonarchDialogComponent, { data });
+        break;
+      }
+      default:
+        this.dialog.open(MintDialogComponent, { data });
+        break;
     }
   }
 }
