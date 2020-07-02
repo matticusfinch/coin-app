@@ -1,11 +1,10 @@
-import { Component, OnInit, ComponentRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
 import { Coin } from 'src/app/shared/models/coin.model';
 import { CoinService } from 'src/app/services/coin.service';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { ArtistDialogComponent } from 'src/app/shared/info-dialogs/artist/artist-dialog.component';
 import { HistoryInfoService } from 'src/app/services/history-info.service';
-import { ComponentType } from '@angular/cdk/portal';
+import { ArtistDialogComponent } from 'src/app/shared/info-dialogs/artist/artist-dialog.component';
 import { MonarchDialogComponent } from 'src/app/shared/info-dialogs/monarch/monarch-dialog.component';
 import { MintDialogComponent } from 'src/app/shared/info-dialogs/mint/mint-dialog.component';
 
