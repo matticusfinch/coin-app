@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Inject } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Artist } from '../../models/artist.model';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 

@@ -3,4 +3,5 @@ export class Mint {
     wiki: string;
     img: string;
     desc: string;
+    founded: number;
 }

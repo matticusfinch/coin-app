@@ -30,4 +30,5 @@ export class Coin {
   weight: number;
   varieties: Variety[];
   monarchLink: string;
+  mintLink: string;
 }
