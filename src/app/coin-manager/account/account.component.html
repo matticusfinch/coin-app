@@ -1,25 +1,23 @@
-<div class="h-screen">
-  <h1 class="text-4xl flex justify-center py-8">Account Settings</h1>
-  <div class="container mx-auto grid grid-cols-12">
-    <div class="col-span-12 sm:col-span-6 sm:col-start-4 mat-card p-8">
-      <form>
-        <mat-form-field appearance="outline" class="mb-10 w-full">
-          <mat-label>Collection Name</mat-label>
-          <input matInput #message maxlength="50" placeholder="Coinmaster's Coin Collection">
-          <mat-icon matSuffix aria-label="Collection icon">photo_library</mat-icon>
-          <mat-hint align="start"><strong>This may be publicly displayed so don't identify yourself.</strong></mat-hint>
-          <mat-hint align="end">{{message.value.length}} / 50</mat-hint>
-        </mat-form-field>
-        <mat-slide-toggle color="primary" class="mb-6">Share my collection publicly</mat-slide-toggle>
-        <mat-radio-group aria-label="Select an option" color="primary" class="flex flex-col">
-          <mat-label>Choose your collecting style:</mat-label>
-          <mat-radio-button value="1" class="mt-2">Collect just years</mat-radio-button>
-          <mat-radio-button value="2" class="mt-2">Collect years and major varieties</mat-radio-button>
-          <mat-radio-button value="3" class="mt-2 mb-6">Make me hurt - collect everything</mat-radio-button>
-        </mat-radio-group>
-        <button mat-stroked-button color="warn" (click)="openDialog()">DELETE MY ACCOUNT</button>
-        <button mat-raised-button color="primary" class="float-right">SAVE</button>
-      </form>
-    </div>
+<h1 class="text-4xl flex justify-center py-8">Account Settings</h1>
+<div class="container mx-auto grid grid-cols-12">
+  <div class="col-span-12 sm:col-span-6 sm:col-start-4 mat-card p-8">
+    <form>
+      <mat-form-field appearance="outline" class="mb-10 w-full">
+        <mat-label>Collection Name</mat-label>
+        <input matInput #message maxlength="50" placeholder="Coinmaster's Coin Collection">
+        <mat-icon matSuffix aria-label="Collection icon">photo_library</mat-icon>
+        <mat-hint align="start"><strong>This may be publicly displayed so don't identify yourself.</strong></mat-hint>
+        <mat-hint align="end">{{message.value.length}} / 50</mat-hint>
+      </mat-form-field>
+      <mat-slide-toggle color="primary" class="mb-6">Share my collection publicly</mat-slide-toggle>
+      <mat-radio-group aria-label="Select an option" color="primary" class="flex flex-col">
+        <mat-label>Choose your collecting style:</mat-label>
+        <mat-radio-button value="1" class="mt-2">Collect just years</mat-radio-button>
+        <mat-radio-button value="2" class="mt-2">Collect years and major varieties</mat-radio-button>
+        <mat-radio-button value="3" class="mt-2 mb-6">Make me hurt - collect everything</mat-radio-button>
+      </mat-radio-group>
+      <button mat-stroked-button color="warn" (click)="openDialog()">DELETE MY ACCOUNT</button>
+      <button mat-raised-button color="primary" class="float-right">SAVE</button>
+    </form>
   </div>
 </div>

@@ -11,23 +11,27 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
 export interface PeriodicElement {
-  name: string;
   position: number;
-  weight: number;
-  symbol: string;
+  type: string;
+  grade: string;
+  purchasePrice: number;
+  location?: string;
+  gradeReference?: string;
+  dateCollected?: string;
+  purchasedFrom?: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+  {position: 1, type: 'I', grade: 'EF-40', purchasePrice: 25, location: 'home', gradeReference: '238d88299', dateCollected: 'Jan 2nd 1999', purchasedFrom: 'Barry'},
+  {position: 2, type: 'III', grade: 'MS-60', purchasePrice: 300, location: 'home', gradeReference: '238d88299'},
+  {position: 3, type: 'I', grade: 'MS-60', purchasePrice: 400, location: 'home', gradeReference: '238d88299'},
+  {position: 4, type: 'III', grade: 'MS-60', purchasePrice: 60, location: 'home', gradeReference: '238d88299'},
+  {position: 5, type: 'III', grade: 'MS-60', purchasePrice: 566, location: 'home', gradeReference: '238d88299'},
+  {position: 6, type: 'II', grade: 'MS-60', purchasePrice: 400, location: 'home', gradeReference: '238d88299', purchasedFrom: 'Barry'},
+  {position: 7, type: 'II', grade: 'MS-63', purchasePrice: 200, location: 'home'},
+  {position: 8, type: 'II', grade: 'MS-60', purchasePrice: 100, location: 'home'},
+  {position: 9, type: 'I', grade: 'MS-66', purchasePrice: 88, location: 'home'},
+  {position: 10, type: 'III', grade: 'MS-60', purchasePrice: 66, location: 'home'},
 ];
 
 @Component({
@@ -40,7 +44,7 @@ export class CoinDetailsComponent implements OnInit {
   coin: Coin;
   denomination: string;
   year: number;
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['position', 'type', 'grade', 'purchasePrice', 'location', 'gradeReference', 'dateCollected', 'purchasedFrom', 'actions'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   @ViewChild(MatSort, {static: true}) sort: MatSort;

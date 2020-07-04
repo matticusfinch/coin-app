@@ -1,4 +1,4 @@
-<div matRipple [ngClass]="coin.size == 'Small' ? 'p-12' : 'p-4 sm:p-6'" class="cursor-pointer outline-none shadow-lg hover:shadow-2xl ease-in-out duration-700 rounded-lg" routerLink="/dashboard/coins/{{denom}}/{{coin.year}}">
+<div matRipple [ngClass]="coin.size == 'Small' ? 'p-12' : 'p-4 sm:p-6'" class="cursor-pointer outline-none shadow-lg hover:shadow-2xl ease-in-out duration-700 rounded-lg mat-table" routerLink="/dashboard/coins/{{denom}}/{{coin.year}}">
     <img class="w-full" src="{{coin.img}}" alt="{{coin.year}} {{coin.denom}}">
     <div class="flex items-center justify-between">
         <span class="text-2xl py-1 px-2 rounded bg-gray-800 text-white">{{coin.year}}</span>

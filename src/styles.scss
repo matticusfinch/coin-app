@@ -49,7 +49,6 @@ $light-theme:   mat-light-theme($light-primary, $light-accent);
 
 @include angular-material-theme($light-theme);
 
-
 $darkdark: (
     50 : #e1e1e1,
     100 : #b5b5b5,
