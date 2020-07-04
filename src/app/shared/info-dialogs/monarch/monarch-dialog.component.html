@@ -5,9 +5,13 @@
             <img [src]="monarch.img">
         </div>
         <div class="col-span-8">
-            <p>{{monarch.bio}}</p>
+            <p class="mb-4">{{monarch.bio}}</p>
             <p>Born: {{monarch.born}}</p>
             <p>Died: {{monarch.died}}</p>
+            <p>Reign Started: {{monarch.reignStart}}</p>
+            <p>Reign Ended: {{monarch.reignEnd}}</p>
+            <p>Preceded by: {{monarch.predecessor}}</p>
+            <p>Succeeded by: {{monarch.successor}}</p>
         </div>
     </div>
 </div>

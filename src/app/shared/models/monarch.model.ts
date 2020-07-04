@@ -7,4 +7,6 @@ export class Monarch {
     bio: string;
     reignStart: string;
     reignEnd: string;
+    predecessor: string;
+    successor: string;
   }

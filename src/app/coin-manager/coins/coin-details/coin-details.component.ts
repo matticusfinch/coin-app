@@ -57,12 +57,12 @@ export class CoinDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.dataSource.sort = this.sort;
     this.activatedRoute.params.subscribe((params) => {
       this.denomination = params.denom;
       this.year = params.year;
       this.getCoin();
     });
-    this.dataSource.sort = this.sort;
   }
 
   getCoin() {
