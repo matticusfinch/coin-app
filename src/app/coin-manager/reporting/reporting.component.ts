@@ -1,33 +1,22 @@
-import { Component } from '@angular/core';
-import { map } from 'rxjs/operators';
-import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
+import { Component, OnInit } from '@angular/core';
+import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
+
+export interface Coin { name: string; }
 
 @Component({
   selector: 'app-reporting',
-  templateUrl: './reporting.component.html',
-  styleUrls: ['./reporting.component.scss']
+  templateUrl: './reporting.component.html'
 })
-export class ReportingComponent {
-  /** Based on the screen size, switch from standard to one column per row */
-  cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-    map(({ matches }) => {
-      if (matches) {
-        return [
-          { title: 'Coins by Grade', cols: 1, rows: 1 },
-          { title: 'Most Recent', cols: 1, rows: 1 },
-          { title: 'Total Coins Collected', cols: 1, rows: 1 },
-          { title: 'Coins by Denomination', cols: 1, rows: 1 }
-        ];
-      }
+export class ReportingComponent implements OnInit {
+  private coinDoc: AngularFirestoreDocument<Coin>;
+  coin: Observable<Coin>;
+  totalCoins: number;
+  constructor(private afs: AngularFirestore) {
+    this.coinDoc = afs.doc<Coin>('coins/newfoundland');
+    this.coin = this.coinDoc.valueChanges();
+  }
 
-      return [
-        { title: 'Coins by Grade', cols: 2, rows: 1 },
-        { title: 'Most Recent', cols: 1, rows: 1 },
-        { title: 'Total Coins Collected', cols: 1, rows: 2 },
-        { title: 'Coins by Denomination', cols: 1, rows: 1 }
-      ];
-    })
-  );
-
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  ngOnInit(): void {
+  }
 }
