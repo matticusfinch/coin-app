@@ -12,6 +12,6 @@
     </div>
 </div>
 <div mat-dialog-actions class="justify-between">
-    <a mat-raised-button [href]="artist.wiki" target="_blank">MORE INFO</a>
+    <a *ngIf="artist.wiki" mat-raised-button [href]="artist.wiki" target="_blank">MORE INFO</a>
     <button mat-button mat-dialog-close>CLOSE</button>
 </div>

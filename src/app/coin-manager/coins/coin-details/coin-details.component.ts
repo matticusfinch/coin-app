@@ -22,12 +22,12 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, type: 'I', grade: 'EF-40', purchasePrice: 25, location: 'home', gradeReference: '238d88299', dateCollected: 'Jan 2nd 1999', purchasedFrom: 'Barry'},
-  {position: 2, type: 'III', grade: 'MS-60', purchasePrice: 300, location: 'home', gradeReference: '238d88299'},
-  {position: 3, type: 'I', grade: 'MS-60', purchasePrice: 400, location: 'home', gradeReference: '238d88299'},
-  {position: 4, type: 'III', grade: 'MS-60', purchasePrice: 60, location: 'home', gradeReference: '238d88299'},
-  {position: 5, type: 'III', grade: 'MS-60', purchasePrice: 566, location: 'home', gradeReference: '238d88299'},
-  {position: 6, type: 'II', grade: 'MS-60', purchasePrice: 400, location: 'home', gradeReference: '238d88299', purchasedFrom: 'Barry'},
+  {position: 1, type: 'I', grade: 'EF-40', purchasePrice: 25, location: 'home', gradeReference: 'PCGS 238d88299', dateCollected: 'Jan 2nd 1999', purchasedFrom: 'Barry'},
+  {position: 2, type: 'III', grade: 'MS-60', purchasePrice: 300, location: 'home', gradeReference: 'PCGS 238d88299'},
+  {position: 3, type: 'I', grade: 'MS-60', purchasePrice: 400, location: 'home', gradeReference: 'PCGS 238d88299'},
+  {position: 4, type: 'III', grade: 'MS-60', purchasePrice: 60, location: 'home', gradeReference: 'Self Graded'},
+  {position: 5, type: 'III', grade: 'MS-60', purchasePrice: 566, location: 'home', gradeReference: 'ICCS Y329'},
+  {position: 6, type: 'II', grade: 'MS-60', purchasePrice: 400, location: 'home', gradeReference: 'ICCS Y234', purchasedFrom: 'Barry'},
   {position: 7, type: 'II', grade: 'MS-63', purchasePrice: 200, location: 'home'},
   {position: 8, type: 'II', grade: 'MS-60', purchasePrice: 100, location: 'home'},
   {position: 9, type: 'I', grade: 'MS-66', purchasePrice: 88, location: 'home'},
@@ -36,8 +36,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 @Component({
   selector: 'app-coin-details',
-  templateUrl: './coin-details.component.html',
-  styleUrls: ['./coin-details.component.css'],
+  templateUrl: './coin-details.component.html'
 })
 
 export class CoinDetailsComponent implements OnInit {

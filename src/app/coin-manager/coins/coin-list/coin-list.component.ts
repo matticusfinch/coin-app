@@ -5,8 +5,7 @@ import { Coin } from 'src/app/shared/models/coin.model';
 
 @Component({
   selector: 'app-coin-list',
-  templateUrl: './coin-list.component.html',
-  styleUrls: ['./coin-list.component.css']
+  templateUrl: './coin-list.component.html'
 })
 export class CoinListComponent implements OnInit {
   cards: Coin[];
