@@ -5,7 +5,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 @Component({
   selector: 'app-reporting',
   templateUrl: './reporting.component.html',
-  styleUrls: ['./reporting.component.css']
+  styleUrls: ['./reporting.component.scss']
 })
 export class ReportingComponent {
   /** Based on the screen size, switch from standard to one column per row */
