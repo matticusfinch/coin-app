@@ -43,7 +43,7 @@ export class CoinDetailsComponent implements OnInit {
   coin: Coin;
   denomination: string;
   year: number;
-  displayedColumns: string[] = ['position', 'type', 'grade', 'purchasePrice', 'location', 'gradeReference', 'dateCollected', 'purchasedFrom', 'actions'];
+  displayedColumns: string[] = ['position', 'type', 'grade', 'gradeReference', 'purchasePrice', 'location', 'dateCollected', 'purchasedFrom', 'actions'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   @ViewChild(MatSort, {static: true}) sort: MatSort;
