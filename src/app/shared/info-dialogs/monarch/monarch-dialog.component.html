@@ -1,10 +1,10 @@
 <h1 mat-dialog-title>{{monarch.name}}</h1>
 <div mat-dialog-content>
     <div class="grid grid-cols-12 container">
-        <div class="col-span-4">
+        <div class="col-span-12 sm:col-span-4">
             <img [src]="monarch.img">
         </div>
-        <div class="col-span-8">
+        <div class="col-span-12 sm:col-span-8">
             <p class="mb-4">{{monarch.bio}}</p>
             <p>Born: {{monarch.born}}</p>
             <p>Died: {{monarch.died}}</p>
