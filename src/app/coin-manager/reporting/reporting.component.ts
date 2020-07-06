@@ -3,7 +3,10 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
 import { Observable } from 'rxjs';
 import { AngularFireAuth  } from '@angular/fire/auth';
 
-export interface Coin { totalCoins: number; coinsCollected: number; }
+export interface Coin {
+  totalCoins: number;
+  coinsCollected: number;
+}
 
 @Component({
   selector: 'app-reporting',
