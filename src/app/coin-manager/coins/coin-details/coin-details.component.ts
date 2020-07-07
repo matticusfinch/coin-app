@@ -22,7 +22,7 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, type: 'I', grade: 'EF-40', purchasePrice: 25, location: 'home', gradeReference: 'PCGS 238d88299', dateCollected: 'Jan 2nd 1999', purchasedFrom: 'Barry'},
+  {position: 1, type: 'I', grade: 'EF-40', purchasePrice: 25, location: 'home', gradeReference: 'PCGS 238d88299', dateCollected: '02.12.1999', purchasedFrom: 'Barry'},
   {position: 2, type: 'III', grade: 'MS-60', purchasePrice: 300, location: 'home', gradeReference: 'PCGS 238d88299'},
   {position: 3, type: 'I', grade: 'MS-60', purchasePrice: 400, location: 'home', gradeReference: 'PCGS 238d88299'},
   {position: 4, type: 'III', grade: 'MS-60', purchasePrice: 60, location: 'home', gradeReference: 'Self Graded'},
