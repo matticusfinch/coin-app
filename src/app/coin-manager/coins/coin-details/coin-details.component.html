@@ -8,10 +8,10 @@
         </div>
         <div class="col-span-12 lg:col-span-4">
             <div class="shadow-lg rounded-lg p-8 mat-table">
-                <p class="text-4xl mb-4">Mint Information</p>
-                <p>Mintage: {{coin.mintage | number}}</p>
-                <p>Minted by: <button mat-button color="primary" [disabled]="!coin.mintLink" (click)="getHistory(coin.mintLink, 'mint')">{{coin.mintedBy}}</button></p>
-                <p>Mint Mark: {{coin.mintMark}}</p>
+                <div class="text-4xl mb-4">Mint Information</div>
+                <div>Mintage: {{coin.mintage | number}}</div>
+                <div>Minted by: <button mat-button color="primary" [disabled]="!coin.mintLink" (click)="getHistory(coin.mintLink, 'mint')">{{coin.mintedBy}}</button></div>
+                <div>Mint Mark: {{coin.mintMark}}</div>
             </div>
             <div class="mt-8" *ngFor="let variety of coin.varieties">
               <div matRipple class="cursor-pointer outline-none shadow-lg hover:shadow-2xl ease-in-out duration-700 rounded-lg p-8 mat-table">
@@ -21,20 +21,20 @@
         </div>
         <div class="col-span-12 lg:col-span-4">
             <div class="shadow-lg rounded-lg p-8 mat-table">
-                <p class="text-4xl">Details</p>
-                <p class="my-4">{{coin.description}}</p>
-                <p class="mb-2">Diameter: {{coin.diameter}}mm</p>
-                <p class="mb-2">Weight: {{coin.weight}}g</p>
-                <p class="mb-2" *ngIf="coin.dieAxis == 'upup'">Die Axis: <mat-icon class="align-middle">arrow_upward</mat-icon><mat-icon class="align-middle">arrow_upward</mat-icon></p>
-                <p class="mb-2" *ngIf="coin.dieAxis == 'updown'">Die Axis: <mat-icon class="align-middle">arrow_upward</mat-icon><mat-icon class="align-middle">arrow_downward</mat-icon></p>
-                <p class="mb-2">Edge: {{coin.edge}}</p>
-                <p class="mb-2">Composition: {{coin.composition}}</p>
-                <p>Designer Obverse: <button mat-button color="primary" [disabled]="!coin.designer.obverseLink" (click)="getHistory(coin.designer.obverseLink, 'artist')">{{coin.designer.Obverse}}</button></p>
-                <p>Designer Reverse: <button mat-button color="primary" [disabled]="!coin.designer.reverseLink" (click)="getHistory(coin.designer.reverseLink, 'artist')">{{coin.designer.Reverse}}</button></p>
-                <p>Engraver Obverse: <button mat-button color="primary" [disabled]="!coin.engraver.obverseLink" (click)="getHistory(coin.engraver.obverseLink, 'artist')">{{coin.engraver.Obverse}}</button></p>
-                <p>Engraver Reverse: <button mat-button color="primary" [disabled]="!coin.engraver.reverseLink" (click)="getHistory(coin.engraver.reverseLink, 'artist')">{{coin.engraver.Reverse}}</button></p>
-                <p>Monarch: <button mat-button color="primary" [disabled]="!coin.monarchLink" (click)="getHistory(coin.monarchLink, 'monarch')">{{coin.monarch}}</button></p>
-                <p *ngIf="coin.size">Size: {{coin.size}}</p>
+                <div class="text-4xl">Details</div>
+                <div class="my-4">{{coin.description}}</div>
+                <div class="mb-2">Diameter: {{coin.diameter}}mm</div>
+                <div class="mb-2">Weight: {{coin.weight}}g</div>
+                <div class="mb-2" *ngIf="coin.dieAxis == 'upup'; else updown">Die Axis: <mat-icon class="align-middle">arrow_upward</mat-icon><mat-icon class="align-middle">arrow_upward</mat-icon></div>
+                <ng-template #updown><div class="mb-2">Die Axis: <mat-icon class="align-middle">arrow_upward</mat-icon><mat-icon class="align-middle">arrow_downward</mat-icon></div></ng-template>
+                <div class="mb-2">Edge: {{coin.edge}}</div>
+                <div class="mb-2">Composition: {{coin.composition}}</div>
+                <div>Designer Obverse: <button mat-button color="primary" [disabled]="!coin.designer.obverseLink" (click)="getHistory(coin.designer.obverseLink, 'artist')">{{coin.designer.Obverse}}</button></div>
+                <div>Designer Reverse: <button mat-button color="primary" [disabled]="!coin.designer.reverseLink" (click)="getHistory(coin.designer.reverseLink, 'artist')">{{coin.designer.Reverse}}</button></div>
+                <div>Engraver Obverse: <button mat-button color="primary" [disabled]="!coin.engraver.obverseLink" (click)="getHistory(coin.engraver.obverseLink, 'artist')">{{coin.engraver.Obverse}}</button></div>
+                <div>Engraver Reverse: <button mat-button color="primary" [disabled]="!coin.engraver.reverseLink" (click)="getHistory(coin.engraver.reverseLink, 'artist')">{{coin.engraver.Reverse}}</button></div>
+                <div>Monarch: <button mat-button color="primary" [disabled]="!coin.monarchLink" (click)="getHistory(coin.monarchLink, 'monarch')">{{coin.monarch}}</button></div>
+                <div *ngIf="coin.size">Size: {{coin.size}}</div>
             </div>
         </div>
     </div>
@@ -81,7 +81,7 @@
         <!-- Date Collected -->
         <ng-container matColumnDef="dateCollected">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Date Collected </th>
-          <td mat-cell *matCellDef="let element"> {{element.dateCollected | date:'EEEE d MMMM y GGGG'}}</td>
+          <td mat-cell *matCellDef="let element"> {{element.dateCollected | date}} </td>
         </ng-container>
       
         <!-- Purchased From -->
