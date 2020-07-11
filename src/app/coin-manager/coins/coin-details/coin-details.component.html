@@ -3,7 +3,9 @@
         <div class="col-span-12 lg:col-span-4">
             <div class="shadow-lg rounded-lg p-8 mat-table">
                 <img class="w-full" src="{{coin.img}}" alt="{{coin.year}} {{coin.denom}}">
-                <button mat-fab color="primary"><mat-icon>cloud_upload</mat-icon></button>
+                <button mat-fab color="primary" (click)="openDialog()">
+                  <mat-icon>insert_photo</mat-icon>
+                </button>
             </div>
         </div>
         <div class="col-span-12 lg:col-span-4">

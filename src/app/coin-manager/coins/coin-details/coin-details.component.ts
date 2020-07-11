@@ -9,6 +9,7 @@ import { MonarchDialogComponent } from 'src/app/shared/info-dialogs/monarch/mona
 import { MintDialogComponent } from 'src/app/shared/info-dialogs/mint/mint-dialog.component';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { UploadComponent } from '../upload/upload.component';
 
 export interface PeriodicElement {
   position: number;
@@ -72,6 +73,10 @@ export class CoinDetailsComponent implements OnInit {
       this.year = params.year;
       this.getCoin();
     });
+  }
+
+  openDialog() {
+    this.dialog.open(UploadComponent);
   }
 
   getCoin() {

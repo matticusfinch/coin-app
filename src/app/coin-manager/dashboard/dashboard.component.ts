@@ -7,7 +7,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { MatDialog } from '@angular/material/dialog';
 import { WhatsHotComponent } from '../whats-hot/whats-hot.component';
 import { ThemeService } from '../../services/theme.service';
-import {OverlayContainer} from '@angular/cdk/overlay';
+import { OverlayContainer } from '@angular/cdk/overlay';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
