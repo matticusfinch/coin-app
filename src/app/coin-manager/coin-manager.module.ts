@@ -15,6 +15,7 @@ import { WhatsHotComponent } from './whats-hot/whats-hot.component';
 import { CoinDetailsComponent } from './coins/coin-details/coin-details.component';
 import { SharedModule } from '../shared/shared.module';
 import { UploadComponent } from './coins/upload/upload.component';
+import { EditCoinComponent } from './coins/edit-coin/edit-coin.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { UploadComponent } from './coins/upload/upload.component';
     WhatsHotComponent,
     CoinDetailsComponent,
     UploadComponent,
+    EditCoinComponent,
   ],
   exports: [
     DashboardComponent

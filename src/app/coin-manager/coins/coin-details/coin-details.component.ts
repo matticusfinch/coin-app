@@ -10,6 +10,7 @@ import { MintDialogComponent } from 'src/app/shared/info-dialogs/mint/mint-dialo
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { UploadComponent } from '../upload/upload.component';
+import { EditCoinComponent } from '../edit-coin/edit-coin.component';
 
 export interface PeriodicElement {
   position: number;
@@ -77,6 +78,10 @@ export class CoinDetailsComponent implements OnInit {
 
   openDialog() {
     this.dialog.open(UploadComponent);
+  }
+
+  openEdit() {
+    this.dialog.open(EditCoinComponent);
   }
 
   getCoin() {
