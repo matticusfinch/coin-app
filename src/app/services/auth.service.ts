@@ -6,7 +6,7 @@ import * as firebase from 'firebase';
 import * as firebaseui from 'firebaseui';
 import { environment } from 'src/environments/environment';
 import { switchMap } from 'rxjs/operators';
-import { of, Observable } from 'rxjs';
+import { of, Observable, BehaviorSubject } from 'rxjs';
 import { User } from '../shared/models/user.model';
 
 firebase.initializeApp(environment.firebase);
@@ -37,14 +37,17 @@ firebase.initializeApp(environment.firebase);
 @Injectable()
 export class AuthService {
   private user: firebase.User;
-  private userDetails: User;
   private ui: any;
+
+  private userSubject: BehaviorSubject<User>;
+  public userOb: Observable<User>;
+
 
   private uiConfig = {
 
     callbacks: {
-      signInSuccessWithAuthResult: this.onLoginSuccessful.bind(this)
-      // signInSuccessWithAuthResult: (authResult, redirectUrl) => {
+      // signInSuccessWithAuthResult: this.onLoginSuccessful.bind(this)
+      signInSuccessWithAuthResult: (authResult, redirectUrl) => {
       //   console.log(authResult);
       //   const currentUserID = firebase.auth().currentUser.uid;
       //   console.log(currentUserID);
@@ -52,7 +55,7 @@ export class AuthService {
       //   // Return type determines whether we continue the redirect automatically
       //   // or whether we leave that to developer to handle.
       //   return true;
-      // }
+       }
     },
     signInSuccessUrl: 'dashboard',
     // signInFlow: 'popup', // this make the auth popup, without it, it displays in page, which is better for mobile.
@@ -68,6 +71,8 @@ export class AuthService {
     public afAuth: AngularFireAuth,
     public router: Router,
     public afs: AngularFirestore) {
+      this.userSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('user')));
+      this.userOb = this.userSubject.asObservable();
 
       afAuth.authState.subscribe(user => {
         this.user = user;
@@ -75,11 +80,11 @@ export class AuthService {
           this.getUser();
         }
       });
+
     }
 
-    getUserDetails() {
-      console.log('in get user details');
-      return this.userDetails;
+    public get userValue(): User {
+      return this.userSubject.value;
     }
 
     startUI(container: string) {
@@ -104,8 +109,9 @@ export class AuthService {
         .doc(this.user.uid).valueChanges()
         .subscribe(data =>
           { if (data) {
-              console.log('in get user');
-              this.userDetails = data as User;
+              localStorage.setItem('user', JSON.stringify(data));
+              this.userSubject.next(data as User);
+              this.onLoginSuccessful();
             } else {
               this.createUser();
             }
@@ -115,11 +121,15 @@ export class AuthService {
     async signOut() {
       await this.afAuth.signOut().then(res => {
         this.router.navigate(['']);
+        localStorage.removeItem('user');
+        this.userSubject.next(null);
         }
       );
     }
 
     stopUI() {
-     this.ui.delete();
+     if (this.ui) {
+      this.ui.delete();
+      }
     }
 }

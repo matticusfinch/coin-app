@@ -21,7 +21,7 @@ export class ReportingComponent implements OnInit {
   collected: Observable<Coin>;
   coinToCollectTotal: number;
   constructor(public authService: AuthService, public coinService: CoinService) {
-    this.user = this.authService.getUserDetails();
+    this.user = this.authService.userValue;
     this.getCoinToCollectTotal();
   }
 
