@@ -1,9 +1,9 @@
-<p class="text-3xl m-8">Hi {{user.displayName}},<br>Thanks for signing up. We'll let you know when we're ready to launch.</p>
+<p class="text-3xl m-8">Hi {{user.name}},<br>Thanks for signing up. We'll let you know when we're ready to launch.</p>
 <div class="grid grid-rows-3 grid-flow-col gap-8 m-8">
   <div class="row-span-3 mat-table rounded-lg shadow-lg p-8">
     <p class="text-3xl">Coins Collected</p>
-    
-      <p class="text-6xl text-center">{{(collected | async)?.coinsCollected}}/{{(coin | async)?.totalCoins}}</p>
+
+      <p class="text-6xl text-center">{{ user.coinsCollected }}/{{ coinToCollectTotal}}</p>
   </div>
   <div class="row-span-1 col-span-2 mat-table rounded-lg shadow-lg p-8">
     <p class="text-3xl">Coins Collected</p>
