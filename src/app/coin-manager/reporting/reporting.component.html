@@ -1,15 +1,13 @@
 <div *ngIf="user">
-  <p class="text-3xl m-8">Hi {{user.name}},<br>Thanks for signing up. We'll let you know when we're ready to launch.</p>
-  <div class="grid grid-rows-3 grid-flow-col gap-8 m-8">
-    <div class="row-span-3 mat-table rounded-lg shadow-lg p-8">
-      <p class="text-3xl">Coins Collected</p>
-
-        <p class="text-6xl text-center">{{ user.coinsCollected }}/{{ coinToCollectTotal}}</p>
-    </div>
-    <div class="row-span-1 col-span-2 mat-table rounded-lg shadow-lg p-8">
-      <p class="text-3xl">Coins Collected</p>
+  <div class="grid grid-rows-6 grid-flow-col gap-8 m-8">
+    <div class="row-span-6 mat-table rounded-lg shadow-lg p-8">
+      <p class="text-3xl">Collected Status</p>
+      <p class="text-6xl text-center">{{ user.coinsCollected }}/{{ coinsToCollectTotal }}</p>
     </div>
     <div class="row-span-2 col-span-2 mat-table rounded-lg shadow-lg p-8">
+      <p class="text-3xl">Total Coins Uploaded</p>
+    </div>
+    <div class="row-span-4 col-span-2 mat-table rounded-lg shadow-lg p-8">
       <p class="text-3xl">Coins Collected</p>
     </div>
   </div>

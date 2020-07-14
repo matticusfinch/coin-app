@@ -19,7 +19,7 @@ export class ReportingComponent implements OnInit {
   public user: User;
   coin: Observable<Coin>;
   collected: Observable<Coin>;
-  coinToCollectTotal: number;
+  coinsToCollectTotal: number;
   constructor(public authService: AuthService, public coinService: CoinService) {
     this.user = this.authService.userValue;
     this.getCoinToCollectTotal();
@@ -30,7 +30,7 @@ export class ReportingComponent implements OnInit {
 
   getCoinToCollectTotal() {
     this.coinService.getCoinCountryTotal().subscribe(
-      total => { this.coinToCollectTotal = total.totalCoins as number; }
+      total => { this.coinsToCollectTotal = total.totalCoins as number; }
     );
   }
 }
