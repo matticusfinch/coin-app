@@ -41,7 +41,7 @@ export class AuthService {
 
   private userSubject: BehaviorSubject<User>;
   public userOb: Observable<User>;
-
+  private
 
   private uiConfig = {
 
@@ -57,7 +57,7 @@ export class AuthService {
       //   return true;
        }
     },
-    signInSuccessUrl: 'dashboard',
+    // signInSuccessUrl: 'dashboard',
     // signInFlow: 'popup', // this make the auth popup, without it, it displays in page, which is better for mobile.
     signInOptions: [
       // Leave the lines as is for the providers you want to offer your users.
@@ -76,7 +76,7 @@ export class AuthService {
 
       afAuth.authState.subscribe(user => {
         this.user = user;
-        if (this.user && user.uid) {
+        if (this.user && user.uid && !this.userValue) {
           this.getUser();
         }
       });
