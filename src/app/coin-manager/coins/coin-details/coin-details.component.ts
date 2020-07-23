@@ -11,6 +11,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { UploadComponent } from '../upload/upload.component';
 import { EditCoinComponent } from '../edit-coin/edit-coin.component';
+import { SellCoinComponent } from '../sell-coin/sell-coin.component';
 
 export interface PeriodicElement {
   position: number;
@@ -82,6 +83,10 @@ export class CoinDetailsComponent implements OnInit {
 
   openEdit() {
     this.dialog.open(EditCoinComponent);
+  }
+
+  openSell() {
+    this.dialog.open(SellCoinComponent);
   }
 
   getCoin() {

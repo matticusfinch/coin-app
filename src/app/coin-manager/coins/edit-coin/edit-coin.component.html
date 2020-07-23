@@ -11,7 +11,7 @@
     </mat-form-field>
     <br>
     <mat-form-field appearance="standard">
-        <mat-label>Choose a date</mat-label>
+        <mat-label>Purchase Date</mat-label>
         <input matInput [matDatepicker]="picker" (click)="picker.open()">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
@@ -44,5 +44,6 @@
       <mat-label>Notes</mat-label>
       <textarea matInput></textarea>
     </mat-form-field>
-    <button mat-fab color="primary"><mat-icon>save</mat-icon></button>
+    <br>
+    <button mat-raised-button color="primary"><mat-icon>save</mat-icon>SAVE</button>
   </div>

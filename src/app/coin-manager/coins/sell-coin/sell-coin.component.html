@@ -1,0 +1,21 @@
+<div class="p-4">
+    <h1>Sell Coin</h1>
+    <mat-form-field appearance="standard">
+      <mat-label>Sell Price</mat-label>
+      <input matInput type="number">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="standard">
+        <mat-label>Sell Date</mat-label>
+        <input matInput [matDatepicker]="picker" (click)="picker.open()">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="standard">
+      <mat-label>Notes</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary"><mat-icon>monetization_on</mat-icon>SELL</button>
+  </div>

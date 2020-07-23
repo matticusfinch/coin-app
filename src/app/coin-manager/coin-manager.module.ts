@@ -16,6 +16,7 @@ import { CoinDetailsComponent } from './coins/coin-details/coin-details.componen
 import { SharedModule } from '../shared/shared.module';
 import { UploadComponent } from './coins/upload/upload.component';
 import { EditCoinComponent } from './coins/edit-coin/edit-coin.component';
+import { SellCoinComponent } from './coins/sell-coin/sell-coin.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { EditCoinComponent } from './coins/edit-coin/edit-coin.component';
     CoinDetailsComponent,
     UploadComponent,
     EditCoinComponent,
+    SellCoinComponent,
   ],
   exports: [
     DashboardComponent
