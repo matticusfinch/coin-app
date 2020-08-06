@@ -41,8 +41,6 @@ export class AuthService {
 
   private userSubject: BehaviorSubject<User>;
   public userOb: Observable<User>;
-  private
-
   private uiConfig = {
 
     callbacks: {
@@ -109,6 +107,7 @@ export class AuthService {
         .doc(this.user.uid).valueChanges()
         .subscribe(data =>
           { if (data) {
+              (data as any).uid = this.user.uid;
               localStorage.setItem('user', JSON.stringify(data));
               this.userSubject.next(data as User);
               this.onLoginSuccessful();
