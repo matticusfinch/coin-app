@@ -11,9 +11,9 @@ export class HomePageComponent implements OnInit {
   constructor(private titleService: Title, private metaService: Meta ) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle('Coin Manager');
+    this.titleService.setTitle('Newfoundland Coin Manager');
     this.metaService.addTags([
-      { name: 'description', content: 'Collect Newfoundland coins with a free to use collection manager that is easy to use and easy to setup!' },
+      { name: 'description', content: 'Collect Newfoundland(NFLD) coins with a free to use collection manager that is easy to setup and a joy to look at!' },
       { name: 'robots', content: 'index, follow' },
     ]);
   }
