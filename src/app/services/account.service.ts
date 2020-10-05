@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AccountSettings } from '../shared/models/account-settings.model';
 import { User } from '../shared/models/user.model';
-import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Injectable({

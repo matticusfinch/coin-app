@@ -1,37 +1,38 @@
 <div class="p-4">
+  <form [formGroup]="editCoinForm">
     <h1>Edit Coin Details</h1>
     <mat-form-field appearance="standard">
       <mat-label>Purchase Price</mat-label>
-      <input matInput type="number">
+      <input matInput type="number" formControlName="purchasePrice" />
     </mat-form-field>
-    <br>
+    <br />
     <mat-form-field appearance="standard">
       <mat-label>Location Stored</mat-label>
-      <input matInput>
+      <input matInput formControlName="locationStored" />
     </mat-form-field>
-    <br>
+    <br />
     <mat-form-field appearance="standard">
-        <mat-label>Purchase Date</mat-label>
-        <input matInput [matDatepicker]="picker" (click)="picker.open()">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
+      <mat-label>Purchase Date</mat-label>
+      <input matInput [matDatepicker]="picker" (click)="picker.open()" formControlName="purchaseDate" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-    <br>
+    <br />
     <mat-form-field appearance="standard">
       <mat-label>Purchased From</mat-label>
-      <input matInput>
+      <input matInput formControlName="purchasedFrom" />
     </mat-form-field>
-    <br>
+    <br />
     <mat-form-field appearance="standard">
       <mat-label>TPG</mat-label>
-      <input matInput>
+      <input matInput formControlName="tpg" />
     </mat-form-field>
-    <br>
+    <br />
     <mat-form-field appearance="standard">
       <mat-label>Grade Reference</mat-label>
-      <input matInput>
+      <input matInput formControlName="gradeReference" />
     </mat-form-field>
-    <br>
+    <br />
     <mat-form-field appearance="standard">
       <mat-label>Type</mat-label>
       <mat-select>
@@ -39,11 +40,14 @@
         <mat-option value="Type II">Type II</mat-option>
       </mat-select>
     </mat-form-field>
-    <br>
+    <br />
     <mat-form-field appearance="standard">
       <mat-label>Notes</mat-label>
-      <textarea matInput></textarea>
+      <textarea matInput formControlName="notes"></textarea>
     </mat-form-field>
-    <br>
-    <button mat-raised-button color="primary"><mat-icon>save</mat-icon>SAVE</button>
-  </div>
+    <br />
+    <button mat-raised-button color="primary" (click)="saveCoin()">
+      <mat-icon>save</mat-icon>SAVE
+    </button>
+  </form>
+</div>
