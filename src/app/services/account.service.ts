@@ -23,7 +23,10 @@ export class AccountService {
   }
 
   updateAccountSettings(collectName: string, sharePublicly: boolean ) {
-    this.firestore.collection('/users').doc(this.userAccount.uid).update({
+    this.firestore
+    .collection('/users')
+    .doc(this.userAccount.uid)
+    .update({
       accountSettings: {
         collectionName: collectName,
         sharedPublicly: sharePublicly,

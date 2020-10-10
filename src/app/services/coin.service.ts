@@ -5,9 +5,9 @@ import { Coin } from '../coin-manager/reporting/reporting.component';
 
 @Injectable()
 export class CoinService {
-  constructor(public firestore: AngularFirestore) {}
 
-
+  constructor(
+    public firestore: AngularFirestore) {}
 
   getCoinList(denomination: string): Observable<any[]> {
     return this.firestore

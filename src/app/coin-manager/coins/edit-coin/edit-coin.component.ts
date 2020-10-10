@@ -26,7 +26,7 @@ export class EditCoinComponent implements OnInit {
   }
 
   saveCoin() {
-    this.saveCoinService.saveCoin();
+    // this.saveCoinService.saveCoin(); -----------todo
     this.openSnackBar('Coin saved.', '');
   }
 
