@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MintDialogComponent } from './mint-dialog.component';
 
@@ -6,7 +6,7 @@ describe('MintDialogComponent', () => {
   let component: MintDialogComponent;
   let fixture: ComponentFixture<MintDialogComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ MintDialogComponent ]
     })

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MonarchDialogComponent } from './monarch-dialog.component';
 
@@ -6,7 +6,7 @@ describe('MonarchDialogComponent', () => {
   let component: MonarchDialogComponent;
   let fixture: ComponentFixture<MonarchDialogComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ MonarchDialogComponent ]
     })
